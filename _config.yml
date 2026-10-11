@@ -2,9 +2,11 @@
 
 title: "صعودهای ورزشی"
 email: [sportclimbing@kavehrs.com](mailto:sportclimbing@kavehrs.com)
+
 description: >-
-مرجع تخصصی صعودهای ورزشی؛ شامل آموزش، دانش علمی، پژوهش، تکنیک‌ها،
-تجهیزات، قوانین مسابقات و اطلاعات معتبر درباره بولدر، لید و سرعت.
+مرجع تخصصی صعودهای ورزشی؛ آموزش، دانش علمی، پژوهش،
+تکنیک‌ها، تجهیزات، قوانین و اطلاعات معتبر درباره بولدر، لید و سرعت.
+
 lang: fa
 
 baseurl: ""
@@ -18,7 +20,11 @@ plugins:
 
 * jekyll-feed
 
-# Exclude from processing.
+# Minima settings
+
+show_excerpts: true
+
+# Exclude from processing
 
 exclude:
 
