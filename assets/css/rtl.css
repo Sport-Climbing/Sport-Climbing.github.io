@@ -332,3 +332,95 @@ a[href^="http"] {
 .sidebar-bottom-links a {
   overflow-wrap: anywhere;
 }
+
+
+
+
+/* Homepage featured article */
+.home-featured {
+  direction: rtl;
+  margin-bottom: 2rem;
+}
+
+.home-featured-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-featured-image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.home-featured-content h1 {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.home-featured-content p {
+  line-height: 1.9;
+}
+
+/* Two-column article grid */
+.home-post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+  direction: rtl;
+}
+
+.home-post-card {
+  min-width: 0;
+  text-align: right;
+}
+
+.home-post-card > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-post-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.home-post-card h2 {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 0 0.5rem;
+}
+
+.home-post-card p {
+  line-height: 1.8;
+}
+
+.home-post-date {
+  color: var(--text-grey-dk-000, #666);
+  font-size: 0.85rem;
+}
+
+/* Mobile: one article per row */
+@media (max-width: 40rem) {
+  .home-post-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-featured-image {
+    max-height: 260px;
+  }
+
+  .home-featured-content h1 {
+    font-size: 1.5rem;
+  }
+}
