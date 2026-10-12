@@ -85,3 +85,17 @@ input, textarea, select {
     text-align: right;
   }
 }
+
+
+/* Move the sidebar to the right on desktop */
+@media (min-width: 50rem) {
+  .side-bar {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .main {
+    margin-left: 0 !important;
+    margin-right: var(--nav-width, 264px) !important;
+  }
+}
