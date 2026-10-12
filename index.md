@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: مطالب
@@ -8,18 +9,52 @@ nav_exclude: true
 
 {% assign latest_posts = site.posts | sort: "date" | reverse %}
 
-{% for post in latest_posts limit:20 %}
-## [{{ post.title }}]({{ post.url | relative_url }})
+{% assign featured_post = latest_posts | first %}
 
-<small>{{ post.date | date: "%Y-%m-%d" }}</small>
-
-{% if post.excerpt %}
-{{ post.excerpt | strip_html | truncatewords: 45 }}
+{% if featured_post %}
+<section class="home-featured" dir="rtl">
+  <a class="home-featured-link" href="{{ featured_post.url | relative_url }}">
+    {% if featured_post.image %}
+    <img
+      class="home-featured-image"
+      src="{{ featured_post.image | relative_url }}"
+      alt="{{ featured_post.title | escape }}"
+      loading="eager">
+    {% endif %}
+    <div class="home-featured-content">
+      <h1>{{ featured_post.title | escape }}</h1>
+      <p class="home-post-date">
+        {{ featured_post.date | date: "%Y-%m-%d" }}
+      </p>
+      {% if featured_post.excerpt %}
+      <p>{{ featured_post.excerpt | strip_html | strip_newlines | truncatewords: 40 }}</p>
+      {% endif %}
+    </div>
+  </a>
+</section>
 {% endif %}
 
-{% unless forloop.last %}
+<div class="home-post-grid" dir="rtl">
+  {% for post in latest_posts offset:1 limit:6 %}
+  <article class="home-post-card">
+    <a href="{{ post.url | relative_url }}">
+      {% if post.image %}
+      <img
+        class="home-post-image"
+        src="{{ post.image | relative_url }}"
+        alt="{{ post.title | escape }}"
+        loading="lazy">
+      {% endif %}
+      <h2>{{ post.title | escape }}</h2>
+    </a>
 
----
+    <p class="home-post-date">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </p>
 
-{% endunless %}
-{% endfor %}
+    {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
