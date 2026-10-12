@@ -95,11 +95,11 @@ body {
   text-align: right;
 }
 
-/* Keep sidebar items aligned to the right */
+/* Keep sidebar items aligned to the right -
 .side-bar {
   align-items: flex-end;
 }
-
+ */
 .site-header,
 .site-nav {
   text-align: right;
