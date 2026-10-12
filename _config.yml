@@ -48,3 +48,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+
+footer_content: "© 2026 صعودهای ورزشی"
