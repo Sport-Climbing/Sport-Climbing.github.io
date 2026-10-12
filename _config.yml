@@ -23,6 +23,19 @@ plugins:
 search_enabled: true
 heading_anchors: true
 
+# Pages collection
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+just_the_docs:
+  collections:
+    pages:
+      name: صفحات
+      nav_exclude: false
+      nav_fold: false
+
 # Exclude from processing
 exclude:
   - .sass-cache/
@@ -35,15 +48,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-
-
-collections:
-  pages:
-    output: true
-    permalink: /:name/
-
-just_the_docs:
-  collections:
-    pages:
-      name: صفحات
