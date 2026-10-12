@@ -1,10 +1,12 @@
 ---
 layout: default
-title: "سیاست تحریریه و منابع"
+title: سیاست تحریریه و منابع
 permalink: /editorial-policy/
-description: "اصول تحریریه و منابع صعودهای ورزشی"
+description: سیاست تحریریه، ارزیابی منابع و اصول انتشار محتوای تخصصی
 lang: fa
+nav_order: 6
 ---
+
 
 # سیاست تحریریه و منابع
 
