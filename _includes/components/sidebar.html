@@ -1,0 +1,52 @@
+
+<header class="side-bar">
+  <div class="site-header">
+    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">
+      {% include title.html %}
+    </a>
+
+    <button
+      id="menu-button"
+      class="site-button btn-reset"
+      aria-label="Menu"
+      aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+        <use xlink:href="#svg-menu"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sidebar-intro" dir="rtl">
+    <p>
+      مرجع تخصصی آموزش، دانش علمی و پژوهش در سنگ‌نوردی ورزشی.
+    </p>
+
+    <h2>موضوعات اصلی</h2>
+
+    <ul class="sidebar-topics">
+      <li><a href="{{ '/topics/bouldering/' | relative_url }}">بولدر</a></li>
+      <li><a href="{{ '/topics/lead/' | relative_url }}">لید</a></li>
+      <li><a href="{{ '/topics/speed/' | relative_url }}">سرعت</a></li>
+      <li><a href="{{ '/topics/techniques/' | relative_url }}">تجهیزات و تکنیک‌ها</a></li>
+      <li><a href="{{ '/topics/science/' | relative_url }}">علم و پژوهش</a></li>
+      <li><a href="{{ '/topics/competitions/' | relative_url }}">قوانین و مسابقات</a></li>
+    </ul>
+  </div>
+
+  {% include_cached components/site_nav.html %}
+
+  <div class="d-md-block d-none site-footer">
+    {% capture nav_footer_custom %}
+      {%- include nav_footer_custom.html -%}
+    {% endcapture %}
+
+    {% if nav_footer_custom != "" %}
+      {{ nav_footer_custom }}
+    {% else %}
+      This site uses
+      <a href="https://github.com/just-the-docs/just-the-docs">
+        Just the Docs
+      </a>
+    {% endif %}
+  </div>
+</header>
