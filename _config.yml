@@ -35,3 +35,15 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+just_the_docs:
+  collections:
+    pages:
+      name: صفحات
