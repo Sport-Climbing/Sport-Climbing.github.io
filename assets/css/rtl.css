@@ -271,3 +271,64 @@ a[href^="http"] {
     overflow-x: auto;
   }
 }
+
+
+
+/* Sidebar introduction and topic links */
+.sidebar-intro {
+  direction: rtl;
+  text-align: right;
+  padding: 0.75rem 1rem 1rem;
+  border-bottom: 1px solid var(--border-color, #eeebee);
+}
+
+.sidebar-intro p {
+  margin: 0 0 1rem;
+  line-height: 1.9;
+}
+
+.sidebar-intro h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.sidebar-topics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-topics li {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-topics a {
+  display: block;
+  padding: 0.35rem 0;
+  line-height: 1.7;
+}
+
+/* About and editorial policy above sidebar copyright */
+.sidebar-bottom-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+}
+
+.sidebar-copyright {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color, #eeebee);
+  font-size: 0.8rem;
+}
+
+/* Keep long Persian links from overflowing */
+.sidebar-intro a,
+.sidebar-bottom-links a {
+  overflow-wrap: anywhere;
+}
