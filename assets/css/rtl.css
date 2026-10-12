@@ -1,4 +1,12 @@
-/* Persian RTL support for Just the Docs */
+
+/*
+ * Persian RTL support for Just the Docs
+ * File: assets/css/rtl.css
+ */
+
+/* ========================================
+   1. Global direction and typography
+   ======================================== */
 
 html {
   direction: rtl;
@@ -10,92 +18,256 @@ body {
 }
 
 /* Main content */
+.main,
 .main-content,
 .main-content-wrap,
 .main-header,
+.main-footer,
 .site-title,
 .site-footer {
   direction: rtl;
   text-align: right;
 }
 
-/* Headings and text */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, li,
-dd, dt, figcaption {
+/* Persian headings and text */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+.main-content p,
+.main-content blockquote,
+.main-content li,
+.main-content dd,
+.main-content dt,
+.main-content figcaption {
   text-align: right;
 }
 
-/* Lists */
-ul, ol {
-  padding-inline-start: 1.5rem;
-  padding-inline-end: 0;
+/* ========================================
+   2. Desktop sidebar: move to the right
+   ======================================== */
+
+/*
+ * Just the Docs uses:
+ * - 50rem for the medium layout breakpoint
+ * - 66.5rem for the large layout breakpoint
+ *
+ * The main content offset must match the sidebar
+ * position and width at each breakpoint.
+ */
+
+@media (min-width: 50rem) {
+  .side-bar {
+    left: auto !important;
+    right: 0 !important;
+
+    border-right: 0 !important;
+    border-left: 1px solid var(--border-color, #eeebee);
+  }
+
+  /* Medium layout */
+  .side-bar + .main {
+    margin-left: 0 !important;
+    margin-right: 15.5rem !important;
+  }
 }
 
-/* Tables */
-table {
-  direction: rtl;
+/* Large layout: preserve the theme's centered layout */
+@media (min-width: 66.5rem) {
+  .side-bar + .main {
+    margin-left: 0 !important;
+
+    margin-right: calc(
+      (100% - 66.5rem) / 2 + 16.5rem
+    ) !important;
+  }
 }
 
-th, td {
-  text-align: right;
-}
-
-/* Sidebar navigation */
+/* Sidebar content and navigation */
 .side-bar,
-.site-nav,
 .site-header,
+.site-nav,
 .nav-list,
 .nav-list-item {
   direction: rtl;
   text-align: right;
 }
 
-/* Search */
+/* Keep sidebar items aligned to the right */
+.side-bar {
+  align-items: flex-end;
+}
+
+.site-header,
+.site-nav {
+  text-align: right;
+}
+
+/* Navigation links */
+.nav-list .nav-list-link {
+  text-align: right;
+}
+
+/* Nested navigation and expanders */
+.nav-list .nav-list-item {
+  text-align: right;
+}
+
+/* ========================================
+   3. Search
+   ======================================== */
+
 .search,
 .search-input,
-.search-results {
+.search-results,
+.search-results-list,
+.search-result,
+.search-result-title,
+.search-result-rel-url,
+.search-result-preview {
   direction: rtl;
   text-align: right;
 }
 
-/* Code should remain left-to-right */
-pre, code, kbd, samp {
-  direction: ltr;
-  text-align: left;
-  unicode-bidi: plaintext;
+/* ========================================
+   4. Lists
+   ======================================== */
+
+.main-content ul,
+.main-content ol {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 0;
 }
 
-/* Keep English links, URLs and technical terms readable */
+.main-content li {
+  text-align: right;
+}
+
+.main-content li > ul,
+.main-content li > ol {
+  margin-inline-start: 0;
+}
+
+/* ========================================
+   5. Tables
+   ======================================== */
+
+.main-content table {
+  direction: rtl;
+}
+
+.main-content th,
+.main-content td {
+  text-align: right;
+}
+
+/* ========================================
+   6. Forms and controls
+   ======================================== */
+
+.main-content input,
+.main-content textarea,
+.main-content select {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Keep search input RTL */
+.search-input {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ========================================
+   7. Code and technical content
+   ======================================== */
+
+/* Code blocks and inline code remain LTR */
+pre,
+pre code,
+code,
+kbd,
+samp {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Preserve direction for explicitly marked content */
+[dir="ltr"],
+.ltr {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Preserve RTL for explicitly marked Persian content */
+[dir="rtl"],
+.rtl {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+/* URLs and external links */
 a[href^="http"] {
   unicode-bidi: plaintext;
 }
 
-/* Forms */
-input, textarea, select {
-  direction: rtl;
-  text-align: right;
+/* ========================================
+   8. Images and media
+   ======================================== */
+
+.main-content img,
+.main-content video,
+.main-content iframe {
+  max-width: 100%;
 }
 
-/* Small screens */
-@media (max-width: 50rem) {
+/* ========================================
+   9. Mobile layout
+   ======================================== */
+
+@media (max-width: 49.999rem) {
+  /*
+   * Do not force a fixed sidebar on mobile.
+   * Keep the theme's native responsive navigation.
+   */
+
+  .side-bar {
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .side-bar + .main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .main,
   .main-content,
-  .main-content-wrap {
+  .main-content-wrap,
+  .main-header {
     direction: rtl;
     text-align: right;
   }
-}
 
-
-/* Move the sidebar to the right on desktop */
-@media (min-width: 50rem) {
-  .side-bar {
-    left: auto !important;
-    right: 0 !important;
+  .site-nav,
+  .site-header,
+  .nav-list,
+  .nav-list-item {
+    direction: rtl;
+    text-align: right;
   }
 
-  .main {
-    margin-left: 0 !important;
-    margin-right: var(--nav-width, 264px) !important;
+  .main-content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
   }
 }
