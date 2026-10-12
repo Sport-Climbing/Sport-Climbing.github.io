@@ -1,40 +1,37 @@
 # Site settings
-
 title: "صعودهای ورزشی"
-email: [sportclimbing@kavehrs.com](mailto:sportclimbing@kavehrs.com)
+email: sportclimbing@kavehrs.com
 
 description: >-
-مرجع تخصصی صعودهای ورزشی؛ آموزش، دانش علمی، پژوهش،
-تکنیک‌ها، تجهیزات، قوانین و اطلاعات معتبر درباره بولدر، لید و سرعت.
+  مرجع تخصصی صعودهای ورزشی؛ آموزش، دانش علمی، پژوهش،
+  تکنیک‌ها، تجهیزات، قوانین و اطلاعات معتبر درباره بولدر، لید و سرعت.
 
 lang: fa
 
 baseurl: ""
 url: "https://sportclimbing.ir"
 
+# Theme
+remote_theme: just-the-docs/just-the-docs
+
 # Build settings
-
-theme: minima
-
 plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
 
-* jekyll-feed
-
-# Minima settings
-
-show_excerpts: true
+# Just the Docs settings
+search_enabled: true
+heading_anchors: true
 
 # Exclude from processing
-
 exclude:
-
-* .sass-cache/
-* .jekyll-cache/
-* gemfiles/
-* Gemfile
-* Gemfile.lock
-* node_modules/
-* vendor/bundle/
-* vendor/cache/
-* vendor/gems/
-* vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
