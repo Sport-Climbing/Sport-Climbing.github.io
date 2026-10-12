@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "درباره ما"
 permalink: /about/
 description: "درباره صعودهای ورزشی؛ مرجع تخصصی آموزش، دانش علمی، پژوهش و اطلاعات سنگ‌نوردی ورزشی"
