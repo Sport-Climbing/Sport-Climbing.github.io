@@ -2,7 +2,7 @@
 layout: default
 title: "سیاست تحریریه و منابع"
 permalink: /editorial-policy/
-description: "اصول تولید محتوا، اعتبارسنجی منابع، ارزیابی پژوهش‌های علمی و اصلاح خطاها در صعودهای ورزشی"
+description: "اصول تحریریه و منابع صعودهای ورزشی"
 lang: fa
 ---
 
