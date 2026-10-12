@@ -1,0 +1,87 @@
+/* Persian RTL support for Just the Docs */
+
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Main content */
+.main-content,
+.main-content-wrap,
+.main-header,
+.site-title,
+.site-footer {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Headings and text */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, li,
+dd, dt, figcaption {
+  text-align: right;
+}
+
+/* Lists */
+ul, ol {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 0;
+}
+
+/* Tables */
+table {
+  direction: rtl;
+}
+
+th, td {
+  text-align: right;
+}
+
+/* Sidebar navigation */
+.side-bar,
+.site-nav,
+.site-header,
+.nav-list,
+.nav-list-item {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Search */
+.search,
+.search-input,
+.search-results {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Code should remain left-to-right */
+pre, code, kbd, samp {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: plaintext;
+}
+
+/* Keep English links, URLs and technical terms readable */
+a[href^="http"] {
+  unicode-bidi: plaintext;
+}
+
+/* Forms */
+input, textarea, select {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Small screens */
+@media (max-width: 50rem) {
+  .main-content,
+  .main-content-wrap {
+    direction: rtl;
+    text-align: right;
+  }
+}
