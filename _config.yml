@@ -50,4 +50,13 @@ exclude:
   - vendor/ruby/
 
 
-footer_content: "© 2026 صعودهای ورزشی"
+footer_content: "© 2026  
+صعودهای ورزشی & KavehRS.com"
+
+
+
+url: "https://sportclimbing.ir"
+
+plugins:
+  - jekyll-sitemap
+
