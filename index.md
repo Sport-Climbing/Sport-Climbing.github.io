@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: مطالب
@@ -6,6 +5,7 @@ description: مطالب تخصصی صعودهای ورزشی
 permalink: /
 nav_exclude: true
 ---
+
 
 {% assign latest_posts = site.posts | sort: "date" | reverse %}
 
