@@ -1,5 +1,5 @@
 ---
 layout: default
 title: بولدر
-permalink: /boulder/
+permalink: /bouldering/
 ---
