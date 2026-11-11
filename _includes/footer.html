@@ -1,0 +1,45 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign items = site.data.navigation[page.lang] %}
+{% assign home_url = site.data.translations.home[page.lang] %}
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">{{ t.wordmark }}</p>
+      <p>{{ site.description }}</p>
+    </div>
+    <div>
+      <h2>{{ t.footer_nav }}</h2>
+      <ul>
+        <li><a href="{{ home_url | relative_url }}">{{ t.home }}</a></li>
+        {% for item in items %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>{{ t.language }}</h2>
+      <ul>
+        {% for language in site.data.languages %}
+          {% if language.enabled %}
+            <li><a href="{% if language.prefix == '' %}/{% else %}{{ language.prefix }}/{% endif %}" hreflang="{{ language.code }}" lang="{{ language.code }}">{{ language.label }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <p>{{ t.future_languages }}</p>
+    </div>
+    <div>
+      <h2>{{ t.legal }}</h2>
+      <ul>
+        <li><a href="{{ site.data.translations.contact[page.lang] | relative_url }}#inquiry">{{ t.plan }}</a></li>
+        {% assign credits_key = "photo-credits" %}
+        <li><a href="{{ site.data.translations[credits_key][page.lang] | relative_url }}">{{ t.credits }}</a></li>
+        <li><a href="{{ site.data.translations.privacy[page.lang] | relative_url }}">{{ t.privacy }}</a></li>
+        <li><a href="{{ site.data.translations.legal[page.lang] | relative_url }}">{{ t.legal }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© {{ site.time | date: "%Y" }} SKIBERGSTEIGEN</span>
+    <span>{{ t.rights }}</span>
+  </div>
+</footer>

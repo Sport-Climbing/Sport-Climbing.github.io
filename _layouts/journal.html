@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% assign t = site.data.ui[page.lang] %}
+{% assign topics = site.data.topics[page.lang] %}
+<section class="page-hero page-hero--plain">
+  <div class="wrap page-hero__content">
+    <h1>{{ page.title }}</h1>
+    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+  </div>
+</section>
+{% include breadcrumbs.html %}
+<div class="wrap page-body">
+  <article class="prose">{{ content }}</article>
+  <div class="topic-filters" data-topic-filters>
+    <button type="button" data-filter="all" aria-pressed="true">{{ t.all_topics }}</button>
+    {% for topic in topics %}
+      <button type="button" data-filter="{{ topic[0] }}" aria-pressed="false">{{ topic[1] }}</button>
+    {% endfor %}
+  </div>
+  <ul class="journal-list">
+    {% assign posts = site.posts | where: "lang", page.lang %}
+    {% for post in posts %}
+      {% assign topic_name = topics[post.topic] %}
+      <li data-topic="{{ post.topic }}">
+        <a href="{{ post.url }}">
+          <div>
+            {% if post.card_image %}
+              {% assign card_image = post.card_image %}
+              {% include picture.html id=card_image sizes="(min-width: 760px) 14rem, 100vw" %}
+            {% endif %}
+          </div>
+          <div>
+            <p class="meta-row">
+              <span>{{ topic_name }}</span>
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% include local-date.html date=post.date lang=page.lang %}</time>
+            </p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="empty-state" data-topic-empty hidden>{{ t.no_posts }}</p>
+</div>

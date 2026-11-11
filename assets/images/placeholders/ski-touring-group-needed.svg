@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" width="1600" height="1000">
+  <title>Ski touring group in Iran</title>
+  <rect width="1600" height="1000" fill="#e7e1d6"/>
+  <rect x="40" y="40" width="1520" height="920" fill="none" stroke="#0c2c38" stroke-width="4"/>
+  <path d="M120 760 L420 420 L620 560 L860 260 L1480 760" fill="none" stroke="#0c2c38" stroke-width="8"/>
+  <path d="M860 260 L980 400" fill="none" stroke="#9a3f1e" stroke-width="8"/>
+  <text x="120" y="160" fill="#9a3f1e" font-family="Georgia, serif" font-size="42" letter-spacing="6">Photograph needed</text>
+  <text x="120" y="240" fill="#1c1915" font-family="Georgia, serif" font-size="64">Ski touring group in Iran</text>
+  <text x="120" y="860" fill="#4a453e" font-family="Helvetica, Arial, sans-serif" font-size="32">Not a photograph</text>
+</svg>

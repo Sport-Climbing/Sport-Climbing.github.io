@@ -1,0 +1,24 @@
+{% assign matches = site.data.images | where: "id", include.id %}
+{% assign image = matches[0] %}
+{% if image %}
+  {% if page.lang == "de" %}
+    {% assign alt = image.alt_de %}
+    {% assign caption = image.caption_de %}
+  {% else %}
+    {% assign alt = image.alt_en %}
+    {% assign caption = image.caption_en %}
+  {% endif %}
+  {% assign loading = include.loading | default: "lazy" %}
+  {% assign sizes = include.sizes | default: "(min-width: 900px) 70vw, 100vw" %}
+  <img
+    src="{{ image.src | relative_url }}"
+    srcset="{{ image.src_small | relative_url }} 960w, {{ image.src | relative_url }} {{ image.width }}w"
+    sizes="{{ sizes }}"
+    width="{{ image.width }}"
+    height="{{ image.height }}"
+    alt="{{ alt | escape }}"
+    loading="{{ loading }}"
+    decoding="async"
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+    {% if include.class %}class="{{ include.class }}"{% endif %}>
+{% endif %}

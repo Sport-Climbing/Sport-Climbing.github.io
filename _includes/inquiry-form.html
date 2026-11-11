@@ -1,0 +1,85 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign endpoint = site.inquiry.endpoint | default: "" %}
+{% assign configured = false %}
+{% if endpoint != "" %}
+  {% assign configured = true %}
+{% endif %}
+<section id="inquiry" class="inquiry">
+  <h2>{{ t.inquiry_title }}</h2>
+  <p>{{ t.inquiry_intro }}</p>
+  {% unless configured %}
+    <p class="form-note">{{ t.inquiry_disabled }} {{ t.inquiry_config_hint }}</p>
+  {% endunless %}
+  {% capture error_json %}{"name":{{ t.form.errors.name | jsonify }},"email":{{ t.form.errors.email | jsonify }},"nationality":{{ t.form.errors.nationality | jsonify }},"destination":{{ t.form.errors.destination | jsonify }},"experience_type":{{ t.form.errors.experience_type | jsonify }},"experience_level":{{ t.form.errors.experience_level | jsonify }},"dates":{{ t.form.errors.dates | jsonify }},"participants":{{ t.form.errors.participants | jsonify }},"message":{{ t.form.errors.message | jsonify }},"summary":{{ t.form.errors.summary | jsonify }}}{% endcapture %}
+  <form class="form" action="{% if configured %}{{ endpoint }}{% else %}{{ page.url | relative_url }}#inquiry{% endif %}" method="post" novalidate data-inquiry-form data-configured="{% if configured %}true{% else %}false{% endif %}" data-errors='{{ error_json | strip }}' data-not-sent="{{ t.inquiry_not_sent | escape }}">
+    <p class="form-error" data-form-summary role="alert" hidden></p>
+    <div class="hp" aria-hidden="true">
+      <label for="company-website">{{ t.honeypot }}</label>
+      <input id="company-website" type="text" name="company_website" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="inquiry-name">{{ t.form.name }} <span>({{ t.required }})</span></label>
+      <input id="inquiry-name" name="name" type="text" autocomplete="name" required aria-describedby="inquiry-name-error">
+      <p class="form-error" id="inquiry-name-error" data-error-for="name" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-email">{{ t.form.email }} <span>({{ t.required }})</span></label>
+      <input id="inquiry-email" name="email" type="email" autocomplete="email" required inputmode="email" aria-describedby="inquiry-email-error">
+      <p class="form-error" id="inquiry-email-error" data-error-for="email" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-nationality">{{ t.form.nationality }} <span>({{ t.required }})</span></label>
+      <input id="inquiry-nationality" name="nationality" type="text" autocomplete="country-name" required aria-describedby="inquiry-nationality-error">
+      <p class="form-error" id="inquiry-nationality-error" data-error-for="nationality" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-destination">{{ t.form.destination }} <span>({{ t.required }})</span></label>
+      <select id="inquiry-destination" name="destination" required aria-describedby="inquiry-destination-error">
+        <option value="">—</option>
+        {% assign dests = site.destinations | where: "lang", page.lang | sort: "order" %}
+        {% for dest in dests %}
+          <option value="{{ dest.title | escape }}"{% if include.destination == dest.title %} selected{% endif %}>{{ dest.title }}</option>
+        {% endfor %}
+        <option value="unsure">{{ t.form.destination_unsure }}</option>
+        <option value="other">{{ t.form.destination_other }}</option>
+      </select>
+      <p class="form-error" id="inquiry-destination-error" data-error-for="destination" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-type">{{ t.form.experience_type }} <span>({{ t.required }})</span></label>
+      <select id="inquiry-type" name="experience_type" required aria-describedby="inquiry-type-error">
+        <option value="">—</option>
+        {% for type in t.form.types %}
+          <option value="{{ type.value }}">{{ type.label }}</option>
+        {% endfor %}
+      </select>
+      <p class="form-error" id="inquiry-type-error" data-error-for="experience_type" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-level">{{ t.form.experience_level }} <span>({{ t.required }})</span></label>
+      <select id="inquiry-level" name="experience_level" required aria-describedby="inquiry-level-error">
+        <option value="">—</option>
+        {% for level in t.form.levels %}
+          <option value="{{ level.value }}">{{ level.label }}</option>
+        {% endfor %}
+      </select>
+      <p class="form-error" id="inquiry-level-error" data-error-for="experience_level" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-dates">{{ t.form.dates }} <span>({{ t.required }})</span></label>
+      <input id="inquiry-dates" name="dates" type="text" autocomplete="off" required aria-describedby="inquiry-dates-error">
+      <p class="form-error" id="inquiry-dates-error" data-error-for="dates" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-participants">{{ t.form.participants }} <span>({{ t.required }})</span></label>
+      <input id="inquiry-participants" name="participants" type="number" min="1" inputmode="numeric" required value="1" aria-describedby="inquiry-participants-error">
+      <p class="form-error" id="inquiry-participants-error" data-error-for="participants" hidden></p>
+    </div>
+    <div class="form-row">
+      <label for="inquiry-message">{{ t.form.message }} <span>({{ t.required }})</span></label>
+      <textarea id="inquiry-message" name="message" required aria-describedby="inquiry-message-error"></textarea>
+      <p class="form-error" id="inquiry-message-error" data-error-for="message" hidden></p>
+    </div>
+    <button class="button" type="submit">{{ t.send }}</button>
+  </form>
+</section>

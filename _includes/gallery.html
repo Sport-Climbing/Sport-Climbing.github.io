@@ -1,0 +1,32 @@
+{% assign t = site.data.ui[page.lang] %}
+<div class="gallery">
+  {% for shot in include.shots %}
+    {% assign matches = site.data.images | where: "id", shot.id %}
+    {% assign image = matches[0] %}
+    {% if image %}
+      {% if page.lang == "de" %}
+        {% assign alt = image.alt_de %}
+        {% assign caption = image.caption_de %}
+      {% else %}
+        {% assign alt = image.alt_en %}
+        {% assign caption = image.caption_en %}
+      {% endif %}
+      {% capture credit %}{{ caption }} {{ t.photo_by }} {{ image.photographer }}, {{ image.license }}.{% endcapture %}
+      <figure class="gallery__item{% if shot.feature %} gallery__item--feature{% endif %}">
+        <button type="button" class="gallery__open" data-lightbox-src="{{ image.src | relative_url }}" data-lightbox-alt="{{ alt | escape }}" data-lightbox-caption="{{ credit | escape }}">
+          <img
+            src="{{ image.src_small | relative_url }}"
+            srcset="{{ image.src_small | relative_url }} 960w, {{ image.src | relative_url }} {{ image.width }}w"
+            sizes="{% if shot.feature %}(min-width: 900px) 50vw, 100vw{% else %}(min-width: 900px) 28vw, 100vw{% endif %}"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+            alt="{{ alt | escape }}"
+            loading="lazy"
+            decoding="async">
+          <span class="visually-hidden">{{ t.enlarge }}</span>
+        </button>
+        <figcaption>{{ caption }}</figcaption>
+      </figure>
+    {% endif %}
+  {% endfor %}
+</div>

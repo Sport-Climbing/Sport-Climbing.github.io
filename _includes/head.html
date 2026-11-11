@@ -1,0 +1,18 @@
+{% assign t = site.data.ui[page.lang] %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2c38">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preload" href="{{ '/assets/fonts/newsreader-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/source-sans-3-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% seo %}
+  {% assign urls = site.data.translations[page.ref] %}
+  {% if urls %}
+    <link rel="alternate" hreflang="en" href="{{ urls.en | absolute_url }}">
+    <link rel="alternate" hreflang="de" href="{{ urls.de | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ urls.en | absolute_url }}">
+  {% endif %}
+  {% include structured-data.html %}
+</head>

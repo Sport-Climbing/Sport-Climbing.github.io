@@ -1,0 +1,8 @@
+{% assign stamp = include.date %}
+{% if include.lang == "de" %}
+  {% assign months = "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember" | split: "|" %}
+{% else %}
+  {% assign months = "January|February|March|April|May|June|July|August|September|October|November|December" | split: "|" %}
+{% endif %}
+{% assign month_index = stamp | date: "%m" | minus: 1 %}
+{{ stamp | date: "%-d" }} {{ months[month_index] }} {{ stamp | date: "%Y" }}

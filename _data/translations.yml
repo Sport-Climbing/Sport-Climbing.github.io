@@ -1,0 +1,64 @@
+# Shared key -> localized path. Used for the language switcher and hreflang.
+home:
+  en: /
+  de: /de/
+destinations:
+  en: /destinations/
+  de: /de/destinations/
+damavand:
+  en: /destinations/damavand/
+  de: /de/destinations/damavand/
+alam-kuh:
+  en: /destinations/alam-kuh/
+  de: /de/destinations/alam-kuh/
+zard-kuh:
+  en: /destinations/zard-kuh/
+  de: /de/destinations/zard-kuh/
+dena:
+  en: /destinations/dena/
+  de: /de/destinations/dena/
+expeditions:
+  en: /expeditions/
+  de: /de/expeditions/
+exp-damavand:
+  en: /expeditions/damavand-ski-mountaineering/
+  de: /de/expeditions/damavand-ski-mountaineering/
+exp-alam-kuh:
+  en: /expeditions/alam-kuh-ski-mountaineering/
+  de: /de/expeditions/alam-kuh-ski-mountaineering/
+exp-zard-kuh:
+  en: /expeditions/zard-kuh-ski-touring/
+  de: /de/expeditions/zard-kuh-ski-touring/
+exp-dena:
+  en: /expeditions/dena-ski-touring/
+  de: /de/expeditions/dena-ski-touring/
+travel-guide:
+  en: /travel-guide/
+  de: /de/travel-guide/
+journal:
+  en: /journal/
+  de: /de/journal/
+journal-intro:
+  en: /journal/ski-mountaineering-iran-introduction/
+  de: /de/journal/skibergsteigen-im-iran/
+journal-planning:
+  en: /journal/questions-before-an-iran-ski-expedition/
+  de: /de/journal/fragen-vor-einer-skitour-im-iran/
+journal-safety:
+  en: /journal/mountain-safety-principles/
+  de: /de/journal/grundsaetze-der-bergsicherheit/
+about:
+  en: /about/
+  de: /de/about/
+contact:
+  en: /contact/
+  de: /de/contact/
+privacy:
+  en: /privacy-policy/
+  de: /de/privacy-policy/
+legal:
+  en: /legal-notice/
+  de: /de/legal-notice/
+photo-credits:
+  en: /photo-credits/
+  de: /de/photo-credits/

@@ -1,0 +1,26 @@
+en:
+  - title: Destinations
+    url: /destinations/
+  - title: Expeditions
+    url: /expeditions/
+  - title: Travel Guide
+    url: /travel-guide/
+  - title: Journal
+    url: /journal/
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+de:
+  - title: Ziele
+    url: /de/destinations/
+  - title: Expeditionen
+    url: /de/expeditions/
+  - title: Reisehinweise
+    url: /de/travel-guide/
+  - title: Journal
+    url: /de/journal/
+  - title: Über das Projekt
+    url: /de/about/
+  - title: Kontakt
+    url: /de/contact/

@@ -1,0 +1,178 @@
+en:
+  eyebrow: Iran · Alborz and Zagros
+  hero_title: Discover Ski Mountaineering in Iran
+  hero_text: Explore Iran's mountains through exceptional ski touring, alpine adventures, and high-altitude winter expeditions.
+  hero_primary: Explore Expeditions
+  hero_primary_url: /expeditions/
+  hero_secondary: Discover Iran
+  hero_secondary_url: /destinations/
+  hero_image: damavand-winter-cone
+  final_title: Your Next Alpine Adventure Starts in Iran
+  final_text: Discover the possibilities of ski mountaineering in Iran and start planning your next expedition.
+  final_button: Plan Your Expedition
+  final_url: /contact/#inquiry
+  destinations_kicker: Destinations
+  destinations_title: Four ranges. Four different kinds of mountain.
+  destinations_intro: >-
+    These are the objectives this site is built around. Each page keeps to
+    what can be checked, and says so when the maps disagree.
+  experiences_kicker: Ways to travel
+  experiences_title: Ski mountaineering, named plainly
+  why_kicker: Why Iran
+  why_title: What is actually distinctive
+  gallery_kicker: Photographs
+  gallery_title: The ranges, as they have been photographed
+  gallery_note: >-
+    These are licensed photographs of Iranian mountains. Where a frame is
+    not winter, or not a ski line, the caption says so. Action photographs
+    of ski descents in Iran are still needed.
+  gallery:
+    - id: alam-kuh-lake
+      feature: true
+    - id: zard-kuh-range
+      feature: false
+    - id: dena-semirom
+      feature: false
+    - id: alamchal-moraines
+      feature: false
+    - id: bazoft-snow
+      feature: false
+    - id: damavand-mazandaran-winter
+      feature: false
+  travel_kicker: Before you travel
+  travel_title: Practical matters, kept separate from the mountains
+  travel_link: Read the travel guide
+  travel_url: /travel-guide/
+  experiences:
+    - title: Ski Mountaineering Expeditions
+      text: A journey in which the ascent and the ski descent are the same project, usually over several days, in terrain that is not a resort.
+      url: /expeditions/#ski-mountaineering
+    - title: Ski Touring
+      text: Travel on skins, for a day or several, on snow that is not prepared and not controlled.
+      url: /expeditions/#ski-touring
+    - title: High-Altitude Ski Ascents
+      text: Objectives on which height itself is the planning problem. Damavand is the reference on this site.
+      url: /expeditions/damavand-ski-mountaineering/
+    - title: Backcountry Skiing
+      text: Skiing unsecured slopes. The decision is about snow and consequence, not about a marked run.
+      url: /expeditions/#backcountry
+    - title: Technical Alpine Winter Adventures
+      text: Winter travel in which rock, ice, or complicated ground can be part of the route. Alam Kuh is the reference.
+      url: /expeditions/alam-kuh-ski-mountaineering/
+  reasons:
+    - title: Two mountain systems
+      text: The Alborz in the north holds Damavand and the Takht-e Soleyman massif. The Zagros, running through the west and south, holds Zard Kuh and Dena. They are not variations of one landscape.
+    - title: Height that has to be planned for
+      text: Iranian government sources give Damavand as 5,610 metres. The other three objectives have summits published above 4,200 metres. Where surveys disagree, the destination page says so.
+    - title: Snow as a season, not a product
+      text: These ranges carry winter and spring snow. A line that is skiable in one year can be rock or unstable snow in another. This site does not publish a snow report.
+    - title: The country between the trailheads
+      text: A ski journey here also moves through Iranian cities, roads, food, and languages. That is part of the travel. It is not a story we invent to decorate a trip.
+  travel_points:
+    - title: Preparation
+      text: Passport, a visa answer you have checked yourself, and insurance that states ski mountaineering in writing.
+      url: /travel-guide/#preparation
+    - title: Access
+      text: Road corridors into the Alborz and the Zagros. Winter closures are a planning fact.
+      url: /travel-guide/#access
+    - title: Equipment
+      text: Touring skis and an avalanche rescue kit you have already practiced with.
+      url: /travel-guide/#equipment
+    - title: Season
+      text: Winter and spring are the snow seasons. The useful window is judged that year.
+      url: /travel-guide/#season
+    - title: Safety
+      text: Weather, avalanche terrain, altitude, and distance from help. No live conditions are posted here.
+      url: /travel-guide/#safety
+    - title: Logistics
+      text: Where the party sleeps, how it moves, and who can call off a summit day.
+      url: /travel-guide/#logistics
+de:
+  eyebrow: Iran · Alborz und Zagros
+  hero_title: Skibergsteigen im Iran entdecken
+  hero_text: Skitouren, alpine Unternehmungen und winterliche Hochtouren in den Bergen des Iran.
+  hero_primary: Expeditionen entdecken
+  hero_primary_url: /de/expeditions/
+  hero_secondary: Iran entdecken
+  hero_secondary_url: /de/destinations/
+  hero_image: damavand-winter-cone
+  final_title: Ihr nächstes alpines Abenteuer beginnt im Iran
+  final_text: Entdecken Sie, was Skibergsteigen im Iran möglich macht, und beginnen Sie mit der Planung Ihrer Expedition.
+  final_button: Expedition planen
+  final_url: /de/contact/#inquiry
+  destinations_kicker: Ziele
+  destinations_title: Vier Gebirge. Vier verschiedene Berge.
+  destinations_intro: >-
+    Um diese Ziele ist die Website gebaut. Jede Seite bleibt bei dem, was
+    sich prüfen lässt, und sagt es, wenn die Karten voneinander abweichen.
+  experiences_kicker: Unterwegs sein
+  experiences_title: Skibergsteigen, klar benannt
+  why_kicker: Warum Iran
+  why_title: Was tatsächlich anders ist
+  gallery_kicker: Fotografien
+  gallery_title: Die Gebirge, so wie sie fotografiert wurden
+  gallery_note: >-
+    Das sind lizenzierte Fotografien iranischer Berge. Wenn eine Aufnahme
+    kein Winter und keine Skilinie ist, steht das in der Bildunterschrift.
+    Aktionsbilder von Skiaabfahrten im Iran fehlen noch.
+  gallery:
+    - id: alam-kuh-lake
+      feature: true
+    - id: zard-kuh-range
+      feature: false
+    - id: dena-semirom
+      feature: false
+    - id: alamchal-moraines
+      feature: false
+    - id: bazoft-snow
+      feature: false
+    - id: damavand-mazandaran-winter
+      feature: false
+  travel_kicker: Vor der Reise
+  travel_title: Praktisches, getrennt von den Bergen
+  travel_link: Zu den Reisehinweisen
+  travel_url: /de/travel-guide/
+  experiences:
+    - title: Skibergsteigen-Expeditionen
+      text: Eine Reise, bei der Aufstieg und Skiaabfahrt dasselbe Vorhaben sind, meist über mehrere Tage, in Gelände, das kein Skigebiet ist.
+      url: /de/expeditions/#skibergsteigen
+    - title: Skitouren
+      text: Unterwegs auf Fellen, einen Tag oder mehrere, auf Schnee, der weder präpariert noch gesichert ist.
+      url: /de/expeditions/#skitouren
+    - title: Skihochtouren
+      text: Ziele, bei denen die Höhe selbst die Planung bestimmt. Der Damavand ist auf dieser Website der Bezug.
+      url: /de/expeditions/damavand-ski-mountaineering/
+    - title: Skitouren im ungesicherten Gelände
+      text: Abfahren, wo niemand den Hang sperrt oder markiert. Es entscheidet der Schnee, nicht ein Pistenplan.
+      url: /de/expeditions/#backcountry
+    - title: Technische alpine Winterunternehmungen
+      text: Winterreisen, bei denen Fels, Eis oder verwickeltes Gelände zum Weg gehören können. Der Alam Kuh ist der Bezug.
+      url: /de/expeditions/alam-kuh-ski-mountaineering/
+  reasons:
+    - title: Zwei Gebirgssysteme
+      text: Der Alborz im Norden trägt den Damavand und das Massiv des Takht-e Soleyman. Der Zagros, durch den Westen und Süden, trägt den Zard Kuh und die Dena. Das sind keine Varianten einer Landschaft.
+    - title: Höhe, die man einplanen muss
+      text: Iranische Regierungsquellen nennen für den Damavand 5.610 Meter. Die drei anderen Ziele haben Gipfel, die über 4.200 Meter veröffentlicht sind. Wo Vermessungen abweichen, steht das auf der Bergseite.
+    - title: Schnee als Jahreszeit, nicht als Produkt
+      text: Diese Gebirge tragen Winter- und Frühjahrsschnee. Eine Linie, die in einem Jahr fahrbar ist, kann im nächsten Fels oder unsicherer Schnee sein. Einen Schneebericht gibt es hier nicht.
+    - title: Das Land zwischen den Ausgangspunkten
+      text: Eine Skireise führt auch durch iranische Städte, über Straßen, zu Essen und Sprachen. Das gehört zur Reise. Es ist keine Geschichte, die wir zur Verzierung erfunden haben.
+  travel_points:
+    - title: Vorbereitung
+      text: Reisepass, eine Visumsauskunft, die Sie selbst geprüft haben, und eine Versicherung, die Skibergsteigen schriftlich einschließt.
+      url: /de/travel-guide/#vorbereitung
+    - title: Zugang
+      text: Straßenkorridore in den Alborz und den Zagros. Wintersperren gehören zur Planung.
+      url: /de/travel-guide/#zugang
+    - title: Ausrüstung
+      text: Tourenski und eine Lawinenausrüstung, mit der Sie bereits geübt haben.
+      url: /de/travel-guide/#ausruestung
+    - title: Jahreszeit
+      text: Winter und Frühjahr sind die Schneemonate. Das brauchbare Fenster beurteilt man in dem Jahr.
+      url: /de/travel-guide/#jahreszeit
+    - title: Sicherheit
+      text: Wetter, Lawinengelände, Höhe und Entfernung zur Hilfe. Aktuelle Verhältnisse stehen hier nicht.
+      url: /de/travel-guide/#sicherheit
+    - title: Logistik
+      text: Wo die Gruppe schläft, wie sie sich bewegt, und wer einen Gipfeltag absagen kann.
+      url: /de/travel-guide/#logistik

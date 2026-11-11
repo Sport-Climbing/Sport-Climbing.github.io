@@ -1,0 +1,17 @@
+{% assign matches = site.data.images | where: "id", include.id %}
+{% assign image = matches[0] %}
+{% assign t = site.data.ui[page.lang] %}
+{% if image %}
+  {% if page.lang == "de" %}
+    {% assign caption = image.caption_de %}
+  {% else %}
+    {% assign caption = image.caption_en %}
+  {% endif %}
+  <figcaption>
+    {{ caption }}
+    {{ t.photo_by }} {{ image.photographer }},
+    <a href="{{ image.license_url }}">{{ image.license }}</a>.
+    <a href="{{ image.source_url }}">Wikimedia Commons</a>.
+    {{ t.adapted }}
+  </figcaption>
+{% endif %}

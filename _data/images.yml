@@ -1,0 +1,182 @@
+# Licensed photographs. Alt text describes what is actually in the frame.
+# src width/height match the larger WebP. src_small is 960 px wide.
+- id: damavand-winter-cone
+  src: /assets/images/destinations/damavand/south-face-2010-1800.webp
+  src_small: /assets/images/destinations/damavand/south-face-2010-960.webp
+  width: 1800
+  height: 1101
+  alt_en: "The south side of Mount Damavand in winter, a broad snow-covered volcanic cone under a blue sky, with wind-blown snow near the summit."
+  alt_de: "Die Südseite des Damavand im Winter: ein breiter, schneebedeckter Vulkankegel unter blauem Himmel, mit verwehtem Schnee nahe dem Gipfel."
+  caption_en: "South side of Mount Damavand in winter."
+  caption_de: "Südseite des Damavand im Winter."
+  photographer: "Safa Daneshvar"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:981012-Damavand-South-IMG_9861-2.jpg"
+  location_en: "Mount Damavand, Alborz, Iran"
+  location_de: "Damavand, Alborz, Iran"
+- id: damavand-polour
+  src: /assets/images/destinations/damavand/south-face-polour-1800.webp
+  src_small: /assets/images/destinations/damavand/south-face-polour-960.webp
+  width: 1800
+  height: 900
+  alt_en: "Mount Damavand from the Polour area on 6 December 2024, snow on the upper cone and a settlement in the shadowed foreground."
+  alt_de: "Der Damavand aus dem Gebiet von Polur am 6. Dezember 2024, Schnee am oberen Kegel und eine Siedlung im Schatten des Vordergrunds."
+  caption_en: "Damavand from the Polour area, 6 December 2024."
+  caption_de: "Damavand aus dem Gebiet von Polur, 6. Dezember 2024."
+  photographer: "Safa Daneshvar"
+  license: "CC BY 4.0"
+  license_url: "https://creativecommons.org/licenses/by/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:030915-Damavand-Polour-IMG_3449-2.jpg"
+  location_en: "Polour area, Mazandaran, Iran"
+  location_de: "Gebiet von Polur, Māzandarān, Iran"
+- id: damavand-mazandaran-winter
+  src: /assets/images/hero/damavand-winter-mazandaran-1800.webp
+  src_small: /assets/images/hero/damavand-winter-mazandaran-960.webp
+  width: 1800
+  height: 1192
+  alt_en: "A winter view in Mazandaran toward the snow-covered slopes of Mount Damavand, with a rocky snowfield in the foreground and cloud on the ridges."
+  alt_de: "Winterblick in Māzandarān auf die schneebedeckten Hänge des Damavand, mit einem felsigen Schneefeld im Vordergrund und Wolken an den Graten."
+  caption_en: "Winter view toward Damavand, Mazandaran."
+  caption_de: "Winterblick zum Damavand, Māzandarān."
+  photographer: "Alireza Javaheri"
+  license: "CC BY 3.0"
+  license_url: "https://creativecommons.org/licenses/by/3.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Iran_-_Mazandaran_-_Damavand_view_in_cold_winter_-_panoramio.jpg"
+  location_en: "Mazandaran, Iran"
+  location_de: "Māzandarān, Iran"
+- id: alam-kuh-lake
+  src: /assets/images/destinations/alam-kuh/glacial-lake-1800.webp
+  src_small: /assets/images/destinations/alam-kuh/glacial-lake-960.webp
+  width: 1800
+  height: 1366
+  alt_en: "A glacial lake with turquoise water and broken ice below the steep rock walls of Alam Kuh, snow still covering the upper slopes."
+  alt_de: "Ein Gletschersee mit türkisfarbenem Wasser und gebrochenem Eis unter den steilen Felswänden des Alam Kuh, Schnee noch an den oberen Hängen."
+  caption_en: "Glacial lake below the Alam Kuh wall."
+  caption_de: "Gletschersee unter der Wand des Alam Kuh."
+  photographer: "Hadi Karimi"
+  license: "CC BY 3.0"
+  license_url: "https://creativecommons.org/licenses/by/3.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Glacial_lake_in_Alam_Kuh_by_Hadi_Karimi.jpg"
+  location_en: "Alam Kuh, Takht-e Soleyman massif, Iran"
+  location_de: "Alam Kuh, Massiv des Takht-e Soleyman, Iran"
+- id: alam-kuh-wall
+  src: /assets/images/destinations/alam-kuh/north-wall-1800.webp
+  src_small: /assets/images/destinations/alam-kuh/north-wall-960.webp
+  width: 1600
+  height: 1200
+  alt_en: "The rock wall of Alam Kuh in spring, pale granite with a climbing rope in the foreground. This photograph does not show a ski descent."
+  alt_de: "Die Felswand des Alam Kuh im Frühling, heller Granit, im Vordergrund ein Kletterseil. Die Aufnahme zeigt keine Skiaabfahrt."
+  caption_en: "Alam Kuh wall in spring. A climbing rope is in the foreground; this is not a ski photograph."
+  caption_de: "Wand des Alam Kuh im Frühling. Im Vordergrund ein Kletterseil; keine Skiaufnahme."
+  photographer: "رضا قاسمی"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Alam_Kuh_wall.jpg"
+  location_en: "Alam Kuh, Mazandaran, Iran"
+  location_de: "Alam Kuh, Māzandarān, Iran"
+- id: alamchal-moraines
+  src: /assets/images/destinations/alam-kuh/alamchal-moraines-1800.webp
+  src_small: /assets/images/destinations/alam-kuh/alamchal-moraines-960.webp
+  width: 1800
+  height: 1350
+  alt_en: "Large boulders and moraine in Alam Chal, with snow patches on the peaks behind. A person beside a boulder shows the scale."
+  alt_de: "Große Blöcke und Moräne im Alamtschal, dahinter Schneefelder an den Gipfeln. Eine Person neben einem Block zeigt den Maßstab."
+  caption_en: "Moraines in Alam Chal. A person beside a boulder shows the scale."
+  caption_de: "Moränen im Alamtschal. Eine Person neben einem Block zeigt den Maßstab."
+  photographer: "Hadi Karimi"
+  license: "CC BY 3.0"
+  license_url: "https://creativecommons.org/licenses/by/3.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Glacial_moraines_in_Alam_Chal_Hadi_Karimi.jpg"
+  location_en: "Alam Chal, Takht-e Soleyman massif, Iran"
+  location_de: "Alamtschal, Massiv des Takht-e Soleyman, Iran"
+- id: zard-kuh-range
+  src: /assets/images/destinations/zard-kuh/range-from-bazoft-1800.webp
+  src_small: /assets/images/destinations/zard-kuh/range-from-bazoft-960.webp
+  width: 1800
+  height: 1196
+  alt_en: "The snow-streaked limestone crest of Zard Kuh above the Bazoft valley, with cloud in the gorge and scrub on the lower slopes."
+  alt_de: "Der schneegestreifte Kalkgrat des Zard Kuh über dem Bazoft-Tal, Wolken in der Schlucht, Buschwerk an den unteren Hängen."
+  caption_en: "Zard Kuh from the Bazoft side."
+  caption_de: "Zard Kuh von der Bazoft-Seite."
+  photographer: "Bazofti"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:View_of_Zardkuh.jpg"
+  location_en: "Zard Kuh, Zagros, Iran"
+  location_de: "Zard Kuh, Zagros, Iran"
+- id: zard-kuh-from-summit
+  src: /assets/images/destinations/zard-kuh/view-from-kolunjin-1800.webp
+  src_small: /assets/images/destinations/zard-kuh/view-from-kolunjin-960.webp
+  width: 1800
+  height: 1350
+  alt_en: "View from Kolunjin, the highest summit of Zard Kuh: dry ridges, a small tarn, and a remnant snowfield. This is not a mid-winter photograph."
+  alt_de: "Blick vom Kolunjin, dem höchsten Gipfel des Zard Kuh: trockene Grate, ein kleiner Bergsee und ein Restschneefeld. Keine Hochwinteraufnahme."
+  caption_en: "From Kolunjin. Late-season snow only. Not a mid-winter photograph."
+  caption_de: "Vom Kolunjin. Nur Restschnee. Keine Hochwinteraufnahme."
+  photographer: "Bazofti"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:View_from_Kolonchin.jpg"
+  location_en: "Kolunjin, Zard Kuh, Iran"
+  location_de: "Kolunjin, Zard Kuh, Iran"
+- id: zard-kuh-crest
+  src: /assets/images/destinations/zard-kuh/kolunjin-1800.webp
+  src_small: /assets/images/destinations/zard-kuh/kolunjin-960.webp
+  width: 1408
+  height: 1056
+  alt_en: "The Kolunjin crest in the Zard Kuh, rock ridges with snow remaining in the gullies."
+  alt_de: "Der Kolunjin-Grat im Zard Kuh, Felsrippen mit Schnee in den Rinnen."
+  caption_en: "Kolunjin crest, Zard Kuh, with snow in the gullies."
+  caption_de: "Kolunjin-Grat, Zard Kuh, mit Schnee in den Rinnen."
+  photographer: "Bazofti"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Kolonchin.jpg"
+  location_en: "Kolunjin, Zard Kuh, Iran"
+  location_de: "Kolunjin, Zard Kuh, Iran"
+- id: bazoft-snow
+  src: /assets/images/destinations/zard-kuh/bazoft-snow-1800.webp
+  src_small: /assets/images/destinations/zard-kuh/bazoft-snow-960.webp
+  width: 1632
+  height: 1224
+  alt_en: "The Bazoft River in the Zagros with snow on the valley sides and a pale turquoise current. A winter valley scene, not a high ski line."
+  alt_de: "Der Fluss Bazoft im Zagros, Schnee an den Talflanken und türkisfarbenes Wasser. Eine Winterszene im Tal, keine hohe Skilinie."
+  caption_en: "Bazoft River in snow. A valley in the Zagros, not a summit ski line."
+  caption_de: "Bazoft bei Schnee. Ein Tal im Zagros, keine Gipfelabfahrt."
+  photographer: "Bazofti"
+  license: "CC BY-SA 4.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Bazoft_river_snow.jpg"
+  location_en: "Bazoft valley, Zagros, Iran"
+  location_de: "Bazoft-Tal, Zagros, Iran"
+- id: dena-semirom
+  src: /assets/images/destinations/dena/from-semirom-road-1800.webp
+  src_small: /assets/images/destinations/dena/from-semirom-road-960.webp
+  width: 1800
+  height: 1192
+  alt_en: "The Dena massif from the Semirom road, snow on the high crest and cultivated green valleys in front."
+  alt_de: "Das Dena-Massiv von der Straße nach Semirom, Schnee auf dem hohen Kamm und grüne Felder im Vordergrund."
+  caption_en: "Dena from the Semirom road. Snow on the crest, green valleys below."
+  caption_de: "Dena von der Straße nach Semirom. Schnee auf dem Kamm, grüne Täler darunter."
+  photographer: "Alireza Javaheri"
+  license: "CC BY 3.0"
+  license_url: "https://creativecommons.org/licenses/by/3.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:The_view_of_Dena_from_Semirom_road_-_panoramio.jpg"
+  location_en: "Dena massif, Zagros, Iran"
+  location_de: "Dena-Massiv, Zagros, Iran"
+- id: dena-north
+  src: /assets/images/destinations/dena/north-view-1800.webp
+  src_small: /assets/images/destinations/dena/north-view-960.webp
+  width: 1692
+  height: 914
+  alt_en: "Dena from the north, along the Yasuj–Semirom road, in March 2012. Snow lies on the crest; the foreground hills are dry."
+  alt_de: "Die Dena von Norden, an der Straße Yasudsch–Semirom, im März 2012. Schnee liegt auf dem Kamm, die Hügel davor sind trocken."
+  caption_en: "Dena from the north, Yasuj–Semirom road, March 2012."
+  caption_de: "Dena von Norden, Straße Yasudsch–Semirom, März 2012."
+  photographer: "Eh kia"
+  license: "CC BY-SA 3.0"
+  license_url: "https://creativecommons.org/licenses/by-sa/3.0/"
+  source_url: "https://commons.wikimedia.org/wiki/File:Dena_Mountain-Iran-Mar2012.JPG"
+  location_en: "Dena, Kohgiluyeh and Boyer-Ahmad, Iran"
+  location_de: "Dena, Kohgiluye und Boyer-Ahmad, Iran"

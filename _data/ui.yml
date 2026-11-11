@@ -1,0 +1,242 @@
+en:
+  skip: Skip to content
+  menu: Menu
+  open_menu: Open menu
+  close_menu: Close menu
+  primary_nav: Primary
+  language: Language
+  home: Home
+  breadcrumb: Breadcrumb
+  footer_nav: Footer
+  wordmark: SKIBERGSTEIGEN
+  destinations: Destinations
+  expeditions: Expeditions
+  journal: Journal
+  read_more: Read the page
+  destination_link: Destination page
+  expedition_link: Expedition outline
+  related_expeditions: Related expedition outlines
+  related_articles: Further reading
+  gallery: Photographs
+  enlarge: Enlarge photograph
+  close: Close
+  photo_by: Photograph by
+  adapted: Resized WebP copy.
+  min_read: min read
+  published: Published
+  publisher: SKIBERGSTEIGEN
+  topics: Topics
+  all_topics: All
+  no_posts: Nothing has been published in this topic yet.
+  no_reports: >-
+    No expedition reports have been published. A field account will appear
+    here only after a real journey, written from that journey.
+  unconfirmed_title: Not a confirmed departure
+  unconfirmed_body: Contact us for current expedition details and availability.
+  outline_note: >-
+    This page is an orientation. It is not a scheduled expedition, and it
+    does not confirm a guide, a price, or a date.
+  fact_heading: At a glance
+  elevation_caution: Published figures differ. See the text before you treat a number as exact.
+  inquiry_title: Expedition inquiry
+  inquiry_intro: >-
+    Tell us what you want to ski and how you travel in the mountains.
+    This is a request for a conversation, not a booking.
+  inquiry_disabled: >-
+    Online inquiries are not connected yet. The form is here so the page is
+    ready. Nothing you submit is stored or delivered until a form service
+    is configured.
+  inquiry_not_sent: >-
+    This inquiry was not sent. The form service is not configured, so
+    nothing was stored.
+  inquiry_config_hint: >-
+    The site owner connects delivery by setting inquiry.endpoint in _config.yml.
+  send: Send inquiry
+  required: Required
+  honeypot: Company website
+  optional: Optional
+  contact_missing: This detail has not been published yet.
+  contact_email: Email
+  contact_phone: Phone
+  contact_address: Address
+  plan: Plan Your Expedition
+  credits: Photograph credits
+  privacy: Privacy policy
+  legal: Legal notice
+  rights: All original text on this site.
+  future_languages: French and Dutch are planned and not published yet.
+  wanted_title: Photographs still needed
+  wanted_intro: >-
+    The panels below are placeholders, not photographs of these mountains.
+    Each filename is where a replacement image should go.
+  geo_label: Approximate summit coordinates
+  safety_label: Safety
+  access_label: Access
+  season_label: Season
+  form:
+    name: Full name
+    email: Email address
+    nationality: Nationality
+    destination: Preferred destination
+    experience_type: Type of experience
+    experience_level: Experience level
+    dates: Preferred travel dates
+    participants: Number of participants
+    message: Message
+    destination_unsure: Not sure yet
+    destination_other: Another Iranian range
+    types:
+      - value: ski-mountaineering
+        label: Ski mountaineering expedition
+      - value: ski-touring
+        label: Ski touring
+      - value: high-altitude
+        label: High-altitude ski ascent
+      - value: backcountry
+        label: Backcountry skiing
+      - value: technical-winter
+        label: Technical alpine winter adventure
+      - value: unsure
+        label: Not sure yet
+    levels:
+      - value: starting
+        label: I have started ski touring
+      - value: regular
+        label: I tour regularly in the Alps or similar ranges
+      - value: high-mountain
+        label: I have high-mountain or expedition experience
+      - value: describing
+        label: I would rather describe it in the message
+    errors:
+      name: Enter your full name.
+      email: Enter a valid email address.
+      nationality: Enter your nationality.
+      destination: Choose a destination, or “Not sure yet”.
+      experience_type: Choose a type of experience.
+      experience_level: Choose the description that fits best.
+      dates: Tell us the dates or the month you have in mind.
+      participants: Enter the number of participants (at least 1).
+      message: Write a short message about the trip you have in mind.
+      summary: The inquiry needs a few corrections before it can be sent.
+de:
+  skip: Zum Inhalt springen
+  menu: Menü
+  open_menu: Menü öffnen
+  close_menu: Menü schließen
+  primary_nav: Hauptnavigation
+  language: Sprache
+  home: Start
+  breadcrumb: Brotkrumen
+  footer_nav: Fußnavigation
+  wordmark: SKIBERGSTEIGEN
+  destinations: Ziele
+  expeditions: Expeditionen
+  journal: Journal
+  read_more: Seite lesen
+  destination_link: Zur Bergseite
+  expedition_link: Zur Expeditionsübersicht
+  related_expeditions: Zugehörige Expeditionsübersichten
+  related_articles: Weitere Beiträge
+  gallery: Fotografien
+  enlarge: Fotografie vergrößern
+  close: Schließen
+  photo_by: Foto
+  adapted: Verkleinerte WebP-Fassung.
+  min_read: Min. Lesezeit
+  published: Veröffentlicht
+  publisher: SKIBERGSTEIGEN
+  topics: Themen
+  all_topics: Alle
+  no_posts: Zu diesem Thema ist noch kein Beitrag veröffentlicht.
+  no_reports: >-
+    Es gibt noch keine Expeditionsberichte. Ein Bericht erscheint hier erst
+    nach einer wirklichen Reise und aus dieser Reise heraus.
+  unconfirmed_title: Keine bestätigte Abreise
+  unconfirmed_body: >-
+    Aktuelle Expeditionsdetails und die Verfügbarkeit teilen wir auf Anfrage mit.
+  outline_note: >-
+    Diese Seite dient der Orientierung. Sie ist keine ausgeschriebene Expedition
+    und bestätigt weder Bergführer, Preis noch Termin.
+  fact_heading: Kurz gefasst
+  elevation_caution: Veröffentlichte Höhen weichen voneinander ab. Lesen Sie den Text, bevor Sie eine Zahl als exakt nehmen.
+  inquiry_title: Expeditionsanfrage
+  inquiry_intro: >-
+    Schreiben Sie uns, was Sie fahren möchten und wie Sie sich in den Bergen
+    bewegen. Das ist ein Gesprächswunsch, keine Buchung.
+  inquiry_disabled: >-
+    Die Online-Anfrage ist noch nicht angeschlossen. Das Formular steht bereit.
+    Es wird nichts gespeichert oder zugestellt, solange kein Formulardienst
+    eingerichtet ist.
+  inquiry_not_sent: >-
+    Diese Anfrage wurde nicht gesendet. Der Formulardienst ist nicht
+    eingerichtet, es wurde nichts gespeichert.
+  inquiry_config_hint: >-
+    Die Zustellung richtet die Betreiberin oder der Betreiber ein, indem
+    inquiry.endpoint in der Datei _config.yml gesetzt wird.
+  send: Anfrage senden
+  required: Pflichtfeld
+  honeypot: Firmenwebsite
+  optional: Optional
+  contact_missing: Diese Angabe ist noch nicht veröffentlicht.
+  contact_email: E-Mail
+  contact_phone: Telefon
+  contact_address: Anschrift
+  plan: Expedition planen
+  credits: Bildnachweise
+  privacy: Datenschutz
+  legal: Impressum
+  rights: Alle eigenen Texte dieser Website.
+  future_languages: Französisch und Niederländisch sind vorgesehen und noch nicht veröffentlicht.
+  wanted_title: Fotografien, die noch fehlen
+  wanted_intro: >-
+    Die Flächen darunter sind Platzhalter, keine Fotografien dieser Berge.
+    Der Dateiname ist der Ort, an den das Ersatzbild gehört.
+  geo_label: Ungefähre Gipfelkoordinaten
+  safety_label: Sicherheit
+  access_label: Zugang
+  season_label: Jahreszeit
+  form:
+    name: Vollständiger Name
+    email: E-Mail-Adresse
+    nationality: Staatsangehörigkeit
+    destination: Bevorzugtes Ziel
+    experience_type: Art der Unternehmung
+    experience_level: Erfahrung
+    dates: Gewünschte Reisedaten
+    participants: Anzahl der Teilnehmerinnen und Teilnehmer
+    message: Nachricht
+    destination_unsure: Noch offen
+    destination_other: Ein anderes Gebirge im Iran
+    types:
+      - value: ski-mountaineering
+        label: Skibergsteigen-Expedition
+      - value: ski-touring
+        label: Skitouren
+      - value: high-altitude
+        label: Skihochtour
+      - value: backcountry
+        label: Skitouren im ungesicherten Gelände
+      - value: technical-winter
+        label: Technische alpine Winterunternehmung
+      - value: unsure
+        label: Noch offen
+    levels:
+      - value: starting
+        label: Ich habe mit Skitouren begonnen
+      - value: regular
+        label: Ich gehe regelmäßig in den Alpen oder vergleichbaren Gebirgen auf Tour
+      - value: high-mountain
+        label: Ich habe Hochtouren- oder Expeditionserfahrung
+      - value: describing
+        label: Ich beschreibe es lieber in der Nachricht
+    errors:
+      name: Bitte den vollständigen Namen eintragen.
+      email: Bitte eine gültige E-Mail-Adresse eintragen.
+      nationality: Bitte die Staatsangehörigkeit eintragen.
+      destination: Bitte ein Ziel wählen oder „Noch offen“.
+      experience_type: Bitte die Art der Unternehmung wählen.
+      experience_level: Bitte die passende Beschreibung wählen.
+      dates: Bitte die Daten oder den Monat nennen, den Sie im Sinn haben.
+      participants: Bitte die Anzahl der Personen eintragen, mindestens 1.
+      message: Bitte kurz beschreiben, welche Reise Sie sich vorstellen.
+      summary: Die Anfrage braucht noch ein paar Korrekturen, bevor sie gesendet werden kann.

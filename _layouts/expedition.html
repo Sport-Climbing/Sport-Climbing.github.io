@@ -1,0 +1,78 @@
+---
+layout: default
+---
+{% assign t = site.data.ui[page.lang] %}
+{% if page.hero_image %}
+  {% assign hero_matches = site.data.images | where: "id", page.hero_image %}
+  {% assign hero = hero_matches[0] %}
+  {% if page.lang == "de" %}
+    {% assign hero_caption = hero.caption_de %}
+  {% else %}
+    {% assign hero_caption = hero.caption_en %}
+  {% endif %}
+  <section class="page-hero">
+    <div class="page-hero__media">
+      {% assign hero_id = page.hero_image %}
+      {% include picture.html id=hero_id loading="eager" fetchpriority="high" sizes="100vw" %}
+    </div>
+    <div class="page-hero__shade" aria-hidden="true"></div>
+    <div class="wrap page-hero__content">
+      <p class="eyebrow">{{ page.destination_name }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+    </div>
+    <p class="hero__credit">{{ hero_caption }} {{ t.photo_by }} {{ hero.photographer }}, <a href="{{ hero.license_url }}">{{ hero.license }}</a>.</p>
+  </section>
+{% endif %}
+{% include breadcrumbs.html %}
+<div class="wrap page-body">
+  {% unless page.confirmed %}
+    <div class="status-banner">
+      <strong>{{ t.unconfirmed_title }}</strong>
+      <p>{{ t.unconfirmed_body }}</p>
+    </div>
+  {% endunless %}
+  <p>{{ t.outline_note }}</p>
+  <dl class="facts">
+    {% if page.destination_name %}
+      <div><dt>{{ t.destinations }}</dt><dd><a href="{{ page.destination_url }}">{{ page.destination_name }}</a></dd></div>
+    {% endif %}
+    {% if page.duration and page.duration != "" %}
+      <div><dt>{% if page.lang == "de" %}Dauer{% else %}Duration{% endif %}</dt><dd>{{ page.duration }}</dd></div>
+    {% endif %}
+    {% if page.difficulty and page.difficulty != "" %}
+      <div><dt>{% if page.lang == "de" %}Schwierigkeit{% else %}Difficulty{% endif %}</dt><dd>{{ page.difficulty }}</dd></div>
+    {% endif %}
+    {% if page.season and page.season != "" %}
+      <div><dt>{{ t.season_label }}</dt><dd>{{ page.season }}</dd></div>
+    {% endif %}
+    {% if page.technical and page.technical != "" %}
+      <div><dt>{% if page.lang == "de" %}Technik{% else %}Technical requirements{% endif %}</dt><dd>{{ page.technical }}</dd></div>
+    {% endif %}
+    {% if page.physical and page.physical != "" %}
+      <div><dt>{% if page.lang == "de" %}Kondition{% else %}Physical requirements{% endif %}</dt><dd>{{ page.physical }}</dd></div>
+    {% endif %}
+    {% if page.equipment and page.equipment != "" %}
+      <div><dt>{% if page.lang == "de" %}Ausrüstung{% else %}Equipment{% endif %}</dt><dd>{{ page.equipment }}</dd></div>
+    {% endif %}
+    {% if page.experience and page.experience != "" %}
+      <div><dt>{% if page.lang == "de" %}Erfahrung{% else %}Recommended experience{% endif %}</dt><dd>{{ page.experience }}</dd></div>
+    {% endif %}
+    {% if page.included and page.included != "" %}
+      <div><dt>{% if page.lang == "de" %}Leistungen{% else %}Included{% endif %}</dt><dd>{{ page.included }}</dd></div>
+    {% endif %}
+    {% if page.excluded and page.excluded != "" %}
+      <div><dt>{% if page.lang == "de" %}Nicht enthalten{% else %}Excluded{% endif %}</dt><dd>{{ page.excluded }}</dd></div>
+    {% endif %}
+    {% if page.price and page.price != "" %}
+      <div><dt>{% if page.lang == "de" %}Preis{% else %}Price{% endif %}</dt><dd>{{ page.price }}</dd></div>
+    {% endif %}
+    {% if page.availability and page.availability != "" %}
+      <div><dt>{% if page.lang == "de" %}Verfügbarkeit{% else %}Availability{% endif %}</dt><dd>{{ page.availability }}</dd></div>
+    {% endif %}
+  </dl>
+  <article class="prose">
+    {{ content }}
+  </article>
+  {% include inquiry-form.html destination=page.destination_name %}
+</div>

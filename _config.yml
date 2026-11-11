@@ -1,59 +1,83 @@
-# Site settings
-title: "صعودهای ورزشی"
-email: sportclimbing@kavehrs.com
+# SKIBERGSTEIGEN — https://skibergsteigen.ir
+# GitHub Pages compatible. Plugins below are in the github-pages whitelist.
 
+title: SKIBERGSTEIGEN
 description: >-
-  مرجع تخصصی صعودهای ورزشی؛ آموزش، دانش علمی، پژوهش،
-  تکنیک‌ها، تجهیزات، قوانین و اطلاعات معتبر درباره بولدر، لید و سرعت.
-
-lang: fa
-
+  Ski mountaineering and ski touring in Iran. Research Damavand, Alam Kuh,
+  Zard Kuh and the Dena mountains, then inquire about an expedition.
+url: "https://skibergsteigen.ir"
 baseurl: ""
-url: "https://sportclimbing.ir"
+lang: en
+timezone: Asia/Tehran
 
-# Theme
-remote_theme: just-the-docs/just-the-docs
+permalink: pretty
+markdown: kramdown
 
-# Build settings
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter_opts:
+    disable: true
+
 plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
 
-# Just the Docs settings
-search_enabled: true
-heading_anchors: true
-
-# Pages collection
 collections:
-  pages:
+  destinations:
     output: true
-    permalink: /:name/
+    permalink: /destinations/:name/
+  expeditions:
+    output: true
+    permalink: /expeditions/:name/
 
-just_the_docs:
-  collections:
-    pages:
-      name: صفحات
-      nav_exclude: false
-      nav_fold: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en
+  - scope:
+      path: "de"
+    values:
+      lang: de
+  - scope:
+      type: destinations
+    values:
+      layout: destination
+      overlay_header: true
+  - scope:
+      type: expeditions
+    values:
+      layout: expedition
+      overlay_header: true
+  - scope:
+      type: posts
+    values:
+      layout: article
 
-# Exclude from processing
+# Logo used by jekyll-seo-tag. Original mark, not a photograph.
+logo: /assets/images/mark.svg
+image: /assets/images/destinations/damavand/south-face-2010-1800.webp
+
+# Inquiry form. Leave endpoint empty until a form service is connected.
+# Example provider: formspree
+# Example endpoint: "https://formspree.io/f/xxxxxxxx"
+# Do not put API keys or passwords here. A form endpoint URL is public by nature;
+# use the provider's form id, never a secret token.
+inquiry:
+  endpoint: ""
+  provider: ""
+
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
+  - node_modules
+  - README.md
+  - scripts
+  - assets/fonts/NEWSREADER-OFL.txt
+  - assets/fonts/SOURCE-SANS-3-OFL.txt
 
-
-
-
-
-
-
-
+sass:
+  style: compressed

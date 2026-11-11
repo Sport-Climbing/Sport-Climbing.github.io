@@ -1,0 +1,63 @@
+# Placeholders. These are not photographs. Replace the SVG with a real,
+# licensed photograph and move the entry into images.yml.
+- id: damavand-ski-descent
+  file: /assets/images/placeholders/damavand-ski-descent-needed.svg
+  title_en: Ski descent on Mount Damavand
+  title_de: Skiaabfahrt am Damavand
+  need_en: >-
+    A ski mountaineering descent or ski approach on Mount Damavand itself,
+    taken on that mountain, with written permission or a free license.
+  need_de: >-
+    Eine Skiaabfahrt oder ein Skianstieg am Damavand selbst, an diesem Berg
+    aufgenommen, mit schriftlicher Erlaubnis oder freier Lizenz.
+- id: alam-kuh-winter-ski
+  file: /assets/images/placeholders/alam-kuh-winter-ski-needed.svg
+  title_en: Winter ski travel around Alam Kuh
+  title_de: Winterliche Skibefahrung am Alam Kuh
+  need_en: >-
+    Ski mountaineering in the Takht-e Soleyman massif in winter or spring
+    snow. The current photographs show the rock wall, lake, and moraines,
+    not a ski party.
+  need_de: >-
+    Skibergsteigen im Takht-e-Soleyman-Massiv bei Winter- oder Frühjahrsschnee.
+    Die vorhandenen Fotos zeigen Wand, See und Moräne, keine Skigruppe.
+- id: zard-kuh-ski-tour
+  file: /assets/images/placeholders/zard-kuh-ski-tour-needed.svg
+  title_en: Ski tour on Zard Kuh
+  title_de: Skitour am Zard Kuh
+  need_en: >-
+    A ski touring party or a ski line on Zard Kuh. Existing photographs show
+    the range, the Kolunjin crest, and the Bazoft valley.
+  need_de: >-
+    Eine Skitourengruppe oder eine Skilinie am Zard Kuh. Vorhanden sind
+    Aufnahmen des Kamms, des Kolunjin und des Bazoft-Tals.
+- id: dena-ski-tour
+  file: /assets/images/placeholders/dena-ski-tour-needed.svg
+  title_en: Ski tour in the Dena mountains
+  title_de: Skitour in der Dena
+  need_en: >-
+    Ski touring on the Dena crest or in one of its high valleys. Existing
+    photographs are distant views of the massif.
+  need_de: >-
+    Skitourengehen auf dem Dena-Kamm oder in einem hohen Tal. Vorhanden sind
+    Fernsichten auf das Massiv.
+- id: ski-touring-group
+  file: /assets/images/placeholders/ski-touring-group-needed.svg
+  title_en: Ski touring group in Iran
+  title_de: Skitourengruppe im Iran
+  need_en: >-
+    An identifiable ski touring group in the Iranian mountains. Do not
+    substitute a resort piste or a photograph from another country.
+  need_de: >-
+    Eine erkennbare Skitourengruppe in den Bergen des Iran. Kein Pistenfoto
+    und keine Aufnahme aus einem anderen Land als Ersatz verwenden.
+- id: high-camp
+  file: /assets/images/placeholders/high-camp-needed.svg
+  title_en: High camp on an Iranian ski expedition
+  title_de: Höhenlager einer Ski-Expedition im Iran
+  need_en: >-
+    A real high camp or mountain shelter used on a ski mountaineering trip
+    in Iran, with permission to publish.
+  need_de: >-
+    Ein echtes Höhenlager oder eine Bergunterkunft einer Skibergsteigen-Reise
+    im Iran, mit Erlaubnis zur Veröffentlichung.

@@ -1,0 +1,27 @@
+# Enabled languages are built and shown in the switcher.
+# French and Dutch are reserved so URLs can be added later as /fr/ and /nl/.
+# Do not add those trees until the content is written by hand.
+- code: en
+  label: English
+  short: EN
+  prefix: ""
+  enabled: true
+  default: true
+- code: de
+  label: Deutsch
+  short: DE
+  prefix: "/de"
+  enabled: true
+  default: false
+- code: fr
+  label: Français
+  short: FR
+  prefix: "/fr"
+  enabled: false
+  default: false
+- code: nl
+  label: Nederlands
+  short: NL
+  prefix: "/nl"
+  enabled: false
+  default: false

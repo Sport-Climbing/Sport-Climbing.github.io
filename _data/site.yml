@@ -1,0 +1,19 @@
+# Public contact details. Leave a value empty until it is real.
+# Do not invent an email address, phone number, street address, or social profile.
+contact:
+  email: ""
+  phone: ""
+  address: ""
+
+social:
+  instagram: ""
+  facebook: ""
+  youtube: ""
+
+# Legal identity for the imprint / legal notice. Leave empty until confirmed.
+operator:
+  legal_name: ""
+  responsible_person: ""
+  registration: ""
+  vat_id: ""
+  country: ""

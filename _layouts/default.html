@@ -1,60 +1,15 @@
----
-layout: table_wrappers
----
-{% assign page_lang = page.lang | default: "fa" %}
-{% if page_lang == "fa" %}
-  {% assign page_dir = "rtl" %}
-  {% assign skip_text = "رفتن به محتوای اصلی" %}
-{% elsif page_lang == "de" %}
-  {% assign page_dir = "ltr" %}
-  {% assign skip_text = "Zum Inhalt springen" %}
-{% elsif page_lang == "fr" %}
-  {% assign page_dir = "ltr" %}
-  {% assign skip_text = "Aller au contenu" %}
-{% else %}
-  {% assign page_dir = "ltr" %}
-  {% assign skip_text = "Skip to main content" %}
-{% endif %}
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
 <!DOCTYPE html>
-
-<html lang="{{ page_lang }}" dir="{{ page_dir }}">
+<html lang="{{ page.lang | default: 'en' }}" dir="ltr">
 {% include head.html %}
-<body class="lang-{{ page_lang }}">
-  <a class="skip-to-main" href="#main-content">{{ skip_text }}</a>
-  {% include icons/icons.html %}
-  {% if page.nav_enabled == true %}
-    {% include components/sidebar.html %}
-  {% elsif layout.nav_enabled == true and page.nav_enabled == nil %}
-    {% include components/sidebar.html %}
-  {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
-    {% include components/sidebar.html %}
-  {% endif %}
-  <div class="main" id="top">
-    {% include components/header.html %}
-    <div class="main-content-wrap">
-      {% include components/breadcrumbs.html %}
-      <div id="main-content" class="main-content">
-        <main>
-          {% if site.heading_anchors != false and page.heading_anchors != false %}
-            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-          {% else %}
-            {{ content }}
-          {% endif %}
-
-          {% if page.has_toc != false %}
-            {% include components/children_nav.html %}
-          {% endif %}
-        </main>
-        {% include components/footer.html %}
-      </div>
-    </div>
-    {% if site.search_enabled != false %}
-      {% include components/search_footer.html %}
-    {% endif %}
-  </div>
-
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
-  {% endif %}
+<body class="layout-{{ page.layout }} lang-{{ page.lang | default: 'en' }}{% if page.overlay_header %} has-overlay-header{% endif %}">
+  <a class="skip-link" href="#main">{{ t.skip }}</a>
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include lightbox.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>

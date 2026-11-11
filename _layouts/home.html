@@ -1,0 +1,133 @@
+---
+layout: default
+---
+{% assign home = site.data.home[page.lang] %}
+{% assign t = site.data.ui[page.lang] %}
+{% assign hero_matches = site.data.images | where: "id", home.hero_image %}
+{% assign hero = hero_matches[0] %}
+{% if page.lang == "de" %}
+  {% assign hero_caption = hero.caption_de %}
+{% else %}
+  {% assign hero_caption = hero.caption_en %}
+{% endif %}
+
+<section class="hero" aria-label="{{ home.hero_title }}">
+  <div class="hero__media">
+    {% assign hero_id = home.hero_image %}
+    {% include picture.html id=hero_id loading="eager" fetchpriority="high" sizes="100vw" %}
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="hero__content">
+    <p class="eyebrow">{{ home.eyebrow }}</p>
+    <h1 class="hero__title">{{ home.hero_title }}</h1>
+    <p class="hero__text">{{ home.hero_text }}</p>
+    <div class="hero__actions">
+      <a class="button" href="{{ home.hero_primary_url | relative_url }}">{{ home.hero_primary }}</a>
+      <a class="button button--ghost" href="{{ home.hero_secondary_url | relative_url }}">{{ home.hero_secondary }}</a>
+    </div>
+  </div>
+  <p class="hero__credit">
+    {{ hero_caption }}
+    {{ t.photo_by }} {{ hero.photographer }},
+    <a href="{{ hero.license_url }}">{{ hero.license }}</a>.
+  </p>
+</section>
+
+<section class="section section--paper">
+  <div class="wrap prose">
+    {{ content }}
+  </div>
+</section>
+
+<section class="section section--white" id="destinations">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ home.destinations_kicker }}</p>
+      <h2>{{ home.destinations_title }}</h2>
+      <p class="lede">{{ home.destinations_intro }}</p>
+    </div>
+    <ol class="dest-list">
+      {% assign featured = site.destinations | where: "lang", page.lang | where: "featured", true | sort: "order" %}
+      {% for destination in featured %}
+        {% include destination-card.html destination=destination index=forloop.index0 lang=page.lang %}
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--paper" id="experiences">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ home.experiences_kicker }}</p>
+      <h2>{{ home.experiences_title }}</h2>
+    </div>
+    <ul class="rule-list">
+      {% for item in home.experiences %}
+        <li>
+          <a href="{{ item.url | relative_url }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+            <span>{{ t.read_more }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ home.why_kicker }}</p>
+      <h2>{{ home.why_title }}</h2>
+    </div>
+    <div class="reason-grid">
+      {% for reason in home.reasons %}
+        <article>
+          <h3>{{ reason.title }}</h3>
+          <p>{{ reason.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper" id="photographs">
+  <div class="wrap-wide">
+    <div class="section-head wrap" style="width:auto;margin-inline:0;">
+      <p class="eyebrow">{{ home.gallery_kicker }}</p>
+      <h2>{{ home.gallery_title }}</h2>
+    </div>
+    {% assign shots = home.gallery %}
+    {% include gallery.html shots=shots %}
+    <p class="gallery-note">{{ home.gallery_note }} <a href="{{ site.data.translations['photo-credits'][page.lang] | relative_url }}">{{ t.credits }}</a></p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">{{ home.travel_kicker }}</p>
+      <h2>{{ home.travel_title }}</h2>
+    </div>
+    <div class="travel-grid">
+      {% for point in home.travel_points %}
+        <article>
+          <a href="{{ point.url | relative_url }}">
+            <h3>{{ point.title }}</h3>
+            <p>{{ point.text }}</p>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+    <p><a class="button button--ink" href="{{ home.travel_url | relative_url }}">{{ home.travel_link }}</a></p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>{{ home.final_title }}</h2>
+    <p>{{ home.final_text }}</p>
+    <a class="button" href="{{ home.final_url | relative_url }}">{{ home.final_button }}</a>
+  </div>
+</section>

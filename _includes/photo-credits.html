@@ -1,0 +1,42 @@
+{% assign t = site.data.ui[page.lang] %}
+<div class="credits-list">
+  {% for image in site.data.images %}
+    {% if page.lang == "de" %}
+      {% assign caption = image.caption_de %}
+      {% assign where = image.location_de %}
+    {% else %}
+      {% assign caption = image.caption_en %}
+      {% assign where = image.location_en %}
+    {% endif %}
+    <article>
+      <img src="{{ image.src_small | relative_url }}" width="{{ image.width }}" height="{{ image.height }}" alt="" loading="lazy" decoding="async">
+      <div>
+        <h2>{{ caption }}</h2>
+        <p>{{ where }}</p>
+        <p>{{ t.photo_by }} {{ image.photographer }}. <a href="{{ image.license_url }}">{{ image.license }}</a>. <a href="{{ image.source_url }}">Wikimedia Commons</a>.</p>
+        <p>{{ t.adapted }}</p>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+<h2>{{ t.wanted_title }}</h2>
+<p>{{ t.wanted_intro }}</p>
+<div class="placeholder-grid">
+  {% for shot in site.data.wanted_photos %}
+    {% if page.lang == "de" %}
+      {% assign need = shot.need_de %}
+      {% assign title = shot.title_de %}
+    {% else %}
+      {% assign need = shot.need_en %}
+      {% assign title = shot.title_en %}
+    {% endif %}
+    <figure>
+      <img src="{{ shot.file | relative_url }}" width="1600" height="1000" alt="{{ title | escape }} — placeholder, not a photograph" loading="lazy">
+      <figcaption>
+        <strong>{{ title }}</strong>
+        <p>{{ need }}</p>
+        <p><code>{{ shot.file }}</code></p>
+      </figcaption>
+    </figure>
+  {% endfor %}
+</div>

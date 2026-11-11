@@ -1,0 +1,6 @@
+Newsreader and Source Sans 3 are used under the SIL Open Font License, version 1.1.
+
+- Newsreader: https://github.com/googlefonts/newsreader
+- Source Sans 3: https://github.com/adobe-fonts/source-sans
+
+The font files in this directory are the Latin and Latin-ext variable subsets published by Fontsource from those upstream families. They are self-hosted so the site does not call a third-party font service.

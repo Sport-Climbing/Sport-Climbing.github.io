@@ -1,0 +1,18 @@
+{% assign t = site.data.ui[include.lang] %}
+{% assign n = include.index | plus: 1 %}
+{% if n < 10 %}{% assign label = n | prepend: "0" %}{% else %}{% assign label = n %}{% endif %}
+<li class="dest-item">
+  <a href="{{ include.destination.url }}">
+    <div class="dest-item__media">
+      {% assign card_image = include.destination.card_image %}
+      {% include picture.html id=card_image sizes="(min-width: 900px) 46vw, 100vw" %}
+    </div>
+    <div class="dest-item__body">
+      <span class="dest-item__index">{{ label }}</span>
+      <h3>{{ include.destination.title }}</h3>
+      <p class="meta">{{ include.destination.location }}</p>
+      <p>{{ include.destination.summary }}</p>
+      <span class="dest-item__more">{{ t.destination_link }}</span>
+    </div>
+  </a>
+</li>

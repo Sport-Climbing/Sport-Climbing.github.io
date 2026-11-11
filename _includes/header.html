@@ -1,0 +1,20 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign home_url = site.data.translations.home[page.lang] %}
+<header class="site-header{% unless page.overlay_header %} is-solid{% endunless %}" data-header>
+  <div class="header-inner">
+    <a class="wordmark" href="{{ home_url | relative_url }}">
+      <img src="{{ '/assets/images/mark.svg' | relative_url }}" width="64" height="64" alt="">
+      <span>{{ t.wordmark }}</span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="visually-hidden">{{ t.open_menu }}</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+    <div class="nav-panel" id="site-nav" data-nav-panel>
+      <nav aria-label="{{ t.primary_nav }}">
+        {% include navigation.html %}
+      </nav>
+      {% include language-switcher.html %}
+    </div>
+  </div>
+</header>

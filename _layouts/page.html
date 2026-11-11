@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% assign t = site.data.ui[page.lang] %}
+{% if page.hero_image %}
+  {% assign hero_matches = site.data.images | where: "id", page.hero_image %}
+  {% assign hero = hero_matches[0] %}
+  {% if page.lang == "de" %}
+    {% assign hero_caption = hero.caption_de %}
+  {% else %}
+    {% assign hero_caption = hero.caption_en %}
+  {% endif %}
+  <section class="page-hero">
+    <div class="page-hero__media">
+      {% assign hero_id = page.hero_image %}
+      {% include picture.html id=hero_id loading="eager" fetchpriority="high" sizes="100vw" %}
+    </div>
+    <div class="page-hero__shade" aria-hidden="true"></div>
+    <div class="wrap page-hero__content">
+      <h1>{{ page.title }}</h1>
+      {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+    </div>
+    <p class="hero__credit">{{ hero_caption }} {{ t.photo_by }} {{ hero.photographer }}, <a href="{{ hero.license_url }}">{{ hero.license }}</a>.</p>
+  </section>
+{% else %}
+  <section class="page-hero page-hero--plain">
+    <div class="wrap page-hero__content">
+      <h1>{{ page.title }}</h1>
+      {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+    </div>
+  </section>
+{% endif %}
+{% include breadcrumbs.html %}
+<div class="wrap page-body">
+  <article class="prose{% if page.wide %} prose--wide{% endif %}">
+    {{ content }}
+  </article>
+</div>

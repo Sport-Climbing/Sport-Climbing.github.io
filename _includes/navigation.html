@@ -1,0 +1,15 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign items = site.data.navigation[page.lang] %}
+<ul class="nav-list">
+  {% for item in items %}
+    {% assign active = false %}
+    {% if page.url == item.url %}
+      {% assign active = true %}
+    {% elsif item.url != "/" and item.url != "/de/" and page.url contains item.url %}
+      {% assign active = true %}
+    {% endif %}
+    <li>
+      <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

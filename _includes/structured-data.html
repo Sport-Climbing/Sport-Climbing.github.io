@@ -1,0 +1,66 @@
+{% assign home_url = site.data.translations.home[page.lang] | absolute_url %}
+{% if page.ref == "home" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "SKIBERGSTEIGEN",
+      "url": {{ site.url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "logo": {{ "/assets/images/mark.svg" | absolute_url | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "name": "SKIBERGSTEIGEN",
+      "url": {{ site.url | jsonify }},
+      "inLanguage": ["en", "de"],
+      "publisher": { "@type": "Organization", "name": "SKIBERGSTEIGEN" }
+    }
+  ]
+}
+</script>
+{% endif %}
+{% if page.ref != "home" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ site.data.ui[page.lang].home | jsonify }},
+      "item": {{ home_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+  ]
+}
+</script>
+{% endif %}
+{% if page.collection == "destinations" and page.latitude %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ page.latitude }},
+    "longitude": {{ page.longitude }}
+  },
+  "containedInPlace": {
+    "@type": "Country",
+    "name": "Iran"
+  }
+}
+</script>
+{% endif %}

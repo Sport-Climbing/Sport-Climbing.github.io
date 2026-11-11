@@ -1,0 +1,13 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign urls = site.data.translations[page.ref] %}
+<nav class="lang-switch" aria-label="{{ t.language }}">
+  {% if urls %}
+    <a href="{{ urls.en | relative_url }}" hreflang="en" lang="en"{% if page.lang == "en" %} aria-current="true"{% endif %}>EN</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ urls.de | relative_url }}" hreflang="de" lang="de"{% if page.lang == "de" %} aria-current="true"{% endif %}>DE</a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}" hreflang="en" lang="en">EN</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ '/de/' | relative_url }}" hreflang="de" lang="de">DE</a>
+  {% endif %}
+</nav>

@@ -1,0 +1,7 @@
+{% assign t = site.data.ui[page.lang] %}
+<article class="status-banner">
+  <p class="eyebrow">{{ include.expedition.destination_name }}</p>
+  <h3><a href="{{ include.expedition.url }}">{{ include.expedition.title }}</a></h3>
+  <p>{{ include.expedition.summary }}</p>
+  <p><a href="{{ include.expedition.url }}">{{ t.expedition_link }}</a></p>
+</article>

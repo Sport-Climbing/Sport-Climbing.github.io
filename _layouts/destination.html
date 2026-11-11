@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign t = site.data.ui[page.lang] %}
+{% assign hero_matches = site.data.images | where: "id", page.hero_image %}
+{% assign hero = hero_matches[0] %}
+{% if page.lang == "de" %}
+  {% assign hero_caption = hero.caption_de %}
+{% else %}
+  {% assign hero_caption = hero.caption_en %}
+{% endif %}
+<section class="page-hero">
+  <div class="page-hero__media">
+    {% assign hero_id = page.hero_image %}
+    {% include picture.html id=hero_id loading="eager" fetchpriority="high" sizes="100vw" %}
+  </div>
+  <div class="page-hero__shade" aria-hidden="true"></div>
+  <div class="wrap page-hero__content">
+    <p class="eyebrow">{{ page.location }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+  </div>
+  <p class="hero__credit">{{ hero_caption }} {{ t.photo_by }} {{ hero.photographer }}, <a href="{{ hero.license_url }}">{{ hero.license }}</a>.</p>
+</section>
+{% include breadcrumbs.html %}
+<div class="wrap page-body">
+  {% if page.facts %}
+    <dl class="facts">
+      {% for fact in page.facts %}
+        <div>
+          <dt>{{ fact.label }}</dt>
+          <dd>{{ fact.value }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+    <p class="caution">{{ t.elevation_caution }}</p>
+  {% endif %}
+  <article class="prose">
+    {{ content }}
+  </article>
+  {% if page.gallery %}
+    <h2>{{ t.gallery }}</h2>
+    {% assign shots = page.gallery %}
+    {% include gallery.html shots=shots %}
+  {% endif %}
+  {% if page.related_keys %}
+    <h2>{{ t.related_expeditions }}</h2>
+    {% for key in page.related_keys %}
+      {% assign matches = site.expeditions | where: "key", key | where: "lang", page.lang %}
+      {% assign exp = matches[0] %}
+      {% if exp %}
+        {% include expedition-card.html expedition=exp %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  <section class="cta-band" style="margin-top:3rem;">
+    <h2>{{ t.plan }}</h2>
+    <p>{{ t.unconfirmed_body }}</p>
+    <a class="button" href="{{ site.data.translations.contact[page.lang] | relative_url }}#inquiry">{{ t.plan }}</a>
+  </section>
+</div>

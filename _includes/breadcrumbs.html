@@ -1,0 +1,21 @@
+{% assign t = site.data.ui[page.lang] %}
+{% assign home_url = site.data.translations.home[page.lang] %}
+<nav class="breadcrumbs wrap" aria-label="{{ t.breadcrumb }}">
+  <ol>
+    <li><a href="{{ home_url | relative_url }}">{{ t.home }}</a></li>
+    {% if page.collection == "destinations" %}
+      <li aria-hidden="true">/</li>
+      <li><a href="{{ site.data.translations.destinations[page.lang] | relative_url }}">{{ t.destinations }}</a></li>
+    {% elsif page.collection == "expeditions" %}
+      <li aria-hidden="true">/</li>
+      <li><a href="{{ site.data.translations.expeditions[page.lang] | relative_url }}">{{ t.expeditions }}</a></li>
+    {% elsif page.layout == "article" %}
+      <li aria-hidden="true">/</li>
+      <li><a href="{{ site.data.translations.journal[page.lang] | relative_url }}">{{ t.journal }}</a></li>
+    {% endif %}
+    {% unless page.ref == "home" %}
+      <li aria-hidden="true">/</li>
+      <li><span aria-current="page">{{ page.title }}</span></li>
+    {% endunless %}
+  </ol>
+</nav>

@@ -1,0 +1,22 @@
+name: Build site
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+      - name: Build with the GitHub Pages gem
+        run: bundle exec jekyll build --strict_front_matter
+      - name: Fail if Liquid left an error marker
+        run: |
+          if grep -R "Liquid error" _site; then
+            exit 1
+          fi
