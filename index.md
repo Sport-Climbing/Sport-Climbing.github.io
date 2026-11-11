@@ -21,7 +21,7 @@ nav_exclude: true
       alt="{{ featured_post.title | escape }}"
       loading="eager">
     {% endif %}
-    <div class="home-featured-content">
+    <div class="home-featured-content"{% if featured_post.lang == "fr" %} dir="ltr"{% endif %}>
       <h1>{{ featured_post.title | escape }}</h1>
       <p class="home-post-date">
         {{ featured_post.date | date: "%Y-%m-%d" }}
@@ -36,7 +36,7 @@ nav_exclude: true
 
 <div class="home-post-grid" dir="rtl">
   {% for post in latest_posts offset:1 limit:6 %}
-  <article class="home-post-card">
+  <article class="home-post-card"{% if post.lang == "fr" %} dir="ltr"{% endif %}>
     <a href="{{ post.url | relative_url }}">
       {% if post.image %}
       <img

@@ -1,2 +1,28 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/rtl.css' | relative_url }}">
+{% if page.lang == "fr" %}
+<script>
+  document.documentElement.lang = "fr";
+</script>
+<style>
+  .main-content,
+  .main-content h1,
+  .main-content h2,
+  .main-content h3,
+  .main-content h4,
+  .main-content h5,
+  .main-content h6,
+  .main-content p,
+  .main-content blockquote,
+  .main-content li,
+  .main-content dd,
+  .main-content dt,
+  .main-content figcaption,
+  .main-content ul,
+  .main-content ol,
+  .main-content table {
+    direction: ltr;
+    text-align: left;
+  }
+</style>
+{% endif %}
