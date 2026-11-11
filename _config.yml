@@ -18,6 +18,7 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-sitemap
 
 # Just the Docs settings
 search_enabled: true
@@ -50,15 +51,9 @@ exclude:
   - vendor/ruby/
 
 
-footer_content: "© 2026  
-صعودهای ورزشی & KavehRS.com"
 
 
 
-url: "https://sportclimbing.ir"
-
-plugins:
-  - jekyll-sitemap
 
 
 

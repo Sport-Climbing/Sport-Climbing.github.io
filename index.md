@@ -1,60 +1,16 @@
 ---
-layout: default
-title: مطالب
-description: مطالب تخصصی صعودهای ورزشی
+layout: gateway
+title: Sport Climbing
+description: صعودهای ورزشی
 permalink: /
 nav_exclude: true
 ---
 
+<h1 lang="fa" dir="rtl">صعودهای ورزشی</h1>
 
-{% assign latest_posts = site.posts | sort: "date" | reverse %}
-
-{% assign featured_post = latest_posts | first %}
-
-{% if featured_post %}
-<section class="home-featured" dir="rtl">
-  <a class="home-featured-link" href="{{ featured_post.url | relative_url }}">
-    {% if featured_post.image %}
-    <img
-      class="home-featured-image"
-      src="{{ featured_post.image | relative_url }}"
-      alt="{{ featured_post.title | escape }}"
-      loading="eager">
-    {% endif %}
-    <div class="home-featured-content"{% if featured_post.lang == "fr" %} dir="ltr"{% endif %}>
-      <h1>{{ featured_post.title | escape }}</h1>
-      <p class="home-post-date">
-        {{ featured_post.date | date: "%Y-%m-%d" }}
-      </p>
-      {% if featured_post.excerpt %}
-      <p>{{ featured_post.excerpt | strip_html | strip_newlines | truncatewords: 40 }}</p>
-      {% endif %}
-    </div>
-  </a>
-</section>
-{% endif %}
-
-<div class="home-post-grid" dir="rtl">
-  {% for post in latest_posts offset:1 limit:6 %}
-  <article class="home-post-card"{% if post.lang == "fr" %} dir="ltr"{% endif %}>
-    <a href="{{ post.url | relative_url }}">
-      {% if post.image %}
-      <img
-        class="home-post-image"
-        src="{{ post.image | relative_url }}"
-        alt="{{ post.title | escape }}"
-        loading="lazy">
-      {% endif %}
-      <h2>{{ post.title | escape }}</h2>
-    </a>
-
-    <p class="home-post-date">
-      {{ post.date | date: "%Y-%m-%d" }}
-    </p>
-
-    {% if post.excerpt %}
-    <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>
-    {% endif %}
-  </article>
-  {% endfor %}
-</div>
+<nav class="gateway-links" aria-label="Languages">
+  <a href="{{ '/fa/' | relative_url }}" lang="fa" dir="rtl" hreflang="fa">فارسی</a>
+  <a href="{{ '/en/' | relative_url }}" lang="en" hreflang="en">English</a>
+  <a href="{{ '/de/' | relative_url }}" lang="de" hreflang="de">Deutsch</a>
+  <a href="{{ '/fr/' | relative_url }}" lang="fr" hreflang="fr">Français</a>
+</nav>

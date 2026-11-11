@@ -1,28 +1,8 @@
-
 <link rel="stylesheet" href="{{ '/assets/css/rtl.css' | relative_url }}">
-{% if page.lang == "fr" %}
-<script>
-  document.documentElement.lang = "fr";
-</script>
-<style>
-  .main-content,
-  .main-content h1,
-  .main-content h2,
-  .main-content h3,
-  .main-content h4,
-  .main-content h5,
-  .main-content h6,
-  .main-content p,
-  .main-content blockquote,
-  .main-content li,
-  .main-content dd,
-  .main-content dt,
-  .main-content figcaption,
-  .main-content ul,
-  .main-content ol,
-  .main-content table {
-    direction: ltr;
-    text-align: left;
-  }
-</style>
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+{% if page.translation_key %}
+  {% assign versions = site.posts | where: "translation_key", page.translation_key %}
+  {% for version in versions %}
+    <link rel="alternate" hreflang="{{ version.lang }}" href="{{ version.url | absolute_url }}">
+  {% endfor %}
 {% endif %}

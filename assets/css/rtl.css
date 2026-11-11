@@ -1,190 +1,106 @@
-
 /*
- * Persian RTL support for Just the Docs
- * File: assets/css/rtl.css
+ * Direction overrides for Persian pages.
+ * Latin-script pages stay on the theme's left-to-right layout.
  */
 
-/* ========================================
-   1. Global direction and typography
-   ======================================== */
-
-html {
+html[dir="rtl"] {
   direction: rtl;
 }
 
-body {
-  direction: rtl;
-  text-align: right;
-}
-
-/* Main content */
-.main,
-.main-content,
-.main-content-wrap,
-.main-header,
-.main-footer,
-.site-title,
-.site-footer {
+html[dir="rtl"] body,
+html[dir="rtl"] .main,
+html[dir="rtl"] .main-content,
+html[dir="rtl"] .main-content-wrap,
+html[dir="rtl"] .main-header,
+html[dir="rtl"] .main-footer,
+html[dir="rtl"] .site-title,
+html[dir="rtl"] .site-footer {
   direction: rtl;
   text-align: right;
 }
 
-/* Persian headings and text */
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6,
-.main-content p,
-.main-content blockquote,
-.main-content li,
-.main-content dd,
-.main-content dt,
-.main-content figcaption {
+html[dir="rtl"] .main-content h1,
+html[dir="rtl"] .main-content h2,
+html[dir="rtl"] .main-content h3,
+html[dir="rtl"] .main-content h4,
+html[dir="rtl"] .main-content h5,
+html[dir="rtl"] .main-content h6,
+html[dir="rtl"] .main-content p,
+html[dir="rtl"] .main-content blockquote,
+html[dir="rtl"] .main-content li,
+html[dir="rtl"] .main-content dd,
+html[dir="rtl"] .main-content dt,
+html[dir="rtl"] .main-content figcaption {
   text-align: right;
 }
-
-/* ========================================
-   2. Desktop sidebar: move to the right
-   ======================================== */
 
 /*
- * Just the Docs uses:
- * - 50rem for the medium layout breakpoint
- * - 66.5rem for the large layout breakpoint
- *
- * The main content offset must match the sidebar
- * position and width at each breakpoint.
+ * Just the Docs uses 50rem and 66.5rem as layout breakpoints.
+ * The content offset has to match the sidebar at each one.
  */
-
 @media (min-width: 50rem) {
-  .side-bar {
+  html[dir="rtl"] .side-bar {
     left: auto !important;
     right: 0 !important;
-
     border-right: 0 !important;
     border-left: 1px solid var(--border-color, #eeebee);
   }
 
-  /* Medium layout */
-  .side-bar + .main {
+  html[dir="rtl"] .side-bar + .main {
     margin-left: 0 !important;
     margin-right: 15.5rem !important;
   }
 }
 
-/* Large layout: preserve the theme's centered layout */
 @media (min-width: 66.5rem) {
-  .side-bar + .main {
+  html[dir="rtl"] .side-bar + .main {
     margin-left: 0 !important;
-
-    margin-right: calc(
-      (100% - 66.5rem) / 2 + 16.5rem
-    ) !important;
+    margin-right: calc((100% - 66.5rem) / 2 + 16.5rem) !important;
   }
 }
 
-/* Sidebar content and navigation */
-.side-bar,
-.site-header,
-.site-nav,
-.nav-list,
-.nav-list-item {
+html[dir="rtl"] .side-bar,
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .site-nav,
+html[dir="rtl"] .nav-list,
+html[dir="rtl"] .nav-list-item,
+html[dir="rtl"] .nav-list .nav-list-link {
   direction: rtl;
   text-align: right;
 }
 
-/* Keep sidebar items aligned to the right -
-.side-bar {
-  align-items: flex-end;
-}
- */
-.site-header,
-.site-nav {
-  text-align: right;
-}
-
-/* Navigation links */
-.nav-list .nav-list-link {
-  text-align: right;
-}
-
-/* Nested navigation and expanders */
-.nav-list .nav-list-item {
-  text-align: right;
-}
-
-/* ========================================
-   3. Search
-   ======================================== */
-
-.search,
-.search-input,
-.search-results,
-.search-results-list,
-.search-result,
-.search-result-title,
-.search-result-rel-url,
-.search-result-preview {
+html[dir="rtl"] .search,
+html[dir="rtl"] .search-input,
+html[dir="rtl"] .search-results,
+html[dir="rtl"] .search-results-list,
+html[dir="rtl"] .search-result,
+html[dir="rtl"] .search-result-title,
+html[dir="rtl"] .search-result-rel-url,
+html[dir="rtl"] .search-result-preview {
   direction: rtl;
   text-align: right;
 }
 
-/* ========================================
-   4. Lists
-   ======================================== */
-
-.main-content ul,
-.main-content ol {
+html[dir="rtl"] .main-content ul,
+html[dir="rtl"] .main-content ol {
   padding-inline-start: 1.5rem;
   padding-inline-end: 0;
 }
 
-.main-content li {
+html[dir="rtl"] .main-content li {
   text-align: right;
 }
 
-.main-content li > ul,
-.main-content li > ol {
-  margin-inline-start: 0;
-}
-
-/* ========================================
-   5. Tables
-   ======================================== */
-
-.main-content table {
-  direction: rtl;
-}
-
-.main-content th,
-.main-content td {
-  text-align: right;
-}
-
-/* ========================================
-   6. Forms and controls
-   ======================================== */
-
-.main-content input,
-.main-content textarea,
-.main-content select {
+html[dir="rtl"] .main-content table,
+html[dir="rtl"] .main-content th,
+html[dir="rtl"] .main-content td,
+html[dir="rtl"] .main-content input,
+html[dir="rtl"] .main-content textarea,
+html[dir="rtl"] .main-content select {
   direction: rtl;
   text-align: right;
 }
 
-/* Keep search input RTL */
-.search-input {
-  direction: rtl;
-  text-align: right;
-}
-
-/* ========================================
-   7. Code and technical content
-   ======================================== */
-
-/* Code blocks and inline code remain LTR */
 pre,
 pre code,
 code,
@@ -195,7 +111,6 @@ samp {
   unicode-bidi: isolate;
 }
 
-/* Preserve direction for explicitly marked content */
 [dir="ltr"],
 .ltr {
   direction: ltr;
@@ -203,7 +118,6 @@ samp {
   unicode-bidi: isolate;
 }
 
-/* Preserve RTL for explicitly marked Persian content */
 [dir="rtl"],
 .rtl {
   direction: rtl;
@@ -211,14 +125,32 @@ samp {
   unicode-bidi: isolate;
 }
 
-/* URLs and external links */
 a[href^="http"] {
   unicode-bidi: plaintext;
 }
 
-/* ========================================
-   8. Images and media
-   ======================================== */
+/*
+ * The theme parks the skip link at left: -999px.
+ * In a right-to-left page that stretches the scroll width
+ * and the first view lands on empty space.
+ */
+html[dir="rtl"] a.skip-to-main {
+  left: auto;
+  right: -999px;
+}
+
+html[dir="rtl"] a.skip-to-main:focus,
+html[dir="rtl"] a.skip-to-main:active {
+  left: auto;
+  right: auto;
+}
+
+html[dir="rtl"] blockquote {
+  padding-left: 0;
+  padding-right: 1rem;
+  border-left: 0;
+  border-right: 3px solid var(--border-color, #eeebee);
+}
 
 .main-content img,
 .main-content video,
@@ -226,201 +158,9 @@ a[href^="http"] {
   max-width: 100%;
 }
 
-/* ========================================
-   9. Mobile layout
-   ======================================== */
-
 @media (max-width: 49.999rem) {
-  /*
-   * Do not force a fixed sidebar on mobile.
-   * Keep the theme's native responsive navigation.
-   */
-
-  .side-bar {
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-left: 0;
-    border-right: 0;
-  }
-
-  .side-bar + .main {
+  html[dir="rtl"] .side-bar + .main {
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
-
-  .main,
-  .main-content,
-  .main-content-wrap,
-  .main-header {
-    direction: rtl;
-    text-align: right;
-  }
-
-  .site-nav,
-  .site-header,
-  .nav-list,
-  .nav-list-item {
-    direction: rtl;
-    text-align: right;
-  }
-
-  .main-content table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-  }
-}
-
-
-
-/* Sidebar introduction and topic links */
-.sidebar-intro {
-  direction: rtl;
-  text-align: right;
-  padding: 0.75rem 1rem 1rem;
-  border-bottom: 1px solid var(--border-color, #eeebee);
-}
-
-.sidebar-intro p {
-  margin: 0 0 1rem;
-  line-height: 1.9;
-}
-
-.sidebar-intro h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-}
-
-.sidebar-topics {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-topics li {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-topics a {
-  display: block;
-  padding: 0.35rem 0;
-  line-height: 1.7;
-}
-
-/* About and editorial policy above sidebar copyright */
-.sidebar-bottom-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  direction: rtl;
-  text-align: right;
-  line-height: 1.8;
-}
-
-.sidebar-copyright {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border-color, #eeebee);
-  font-size: 0.8rem;
-}
-
-/* Keep long Persian links from overflowing */
-.sidebar-intro a,
-.sidebar-bottom-links a {
-  overflow-wrap: anywhere;
-}
-
-
-
-
-/* Homepage featured article */
-.home-featured {
-  direction: rtl;
-  margin-bottom: 2rem;
-}
-
-.home-featured-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.home-featured-image {
-  display: block;
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.home-featured-content h1 {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-.home-featured-content p {
-  line-height: 1.9;
-}
-
-/* Two-column article grid */
-.home-post-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem 1.5rem;
-  direction: rtl;
-}
-
-.home-post-card {
-  min-width: 0;
-  text-align: right;
-}
-
-.home-post-card > a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.home-post-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
-}
-
-.home-post-card h2 {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin: 0 0 0.5rem;
-}
-
-.home-post-card p {
-  line-height: 1.8;
-}
-
-.home-post-date {
-  color: var(--text-grey-dk-000, #666);
-  font-size: 0.85rem;
-}
-
-/* Mobile: one article per row */
-@media (max-width: 40rem) {
-  .home-post-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .home-featured-image {
-    max-height: 260px;
-  }
-
-  .home-featured-content h1 {
-    font-size: 1.5rem;
   }
 }
