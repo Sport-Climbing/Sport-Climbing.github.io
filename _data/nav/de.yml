@@ -1,0 +1,16 @@
+dir: ltr
+brand: Sportklettern
+intro: Ein Ort zum Lesen und Lernen über Sportklettern.
+home_label: Beiträge
+home_url: /de/
+articles_label: Beiträge
+pages_label: Seiten
+all_languages: Alle Sprachen
+copyright: Sportklettern
+pages:
+  - title: Über uns
+    url: /de/about/
+  - title: Redaktionsrichtlinien und Quellen
+    url: /de/editorial-policy/
+  - title: Kontakt
+    url: /de/contact/

@@ -1,39 +1,10 @@
 {% assign lang = page.lang | default: "fa" %}
-{% if lang == "en" %}
-  {% assign brand = "Sport Climbing" %}
-  {% assign intro = "A reference for learning and reading about sport climbing." %}
-  {% assign section_home = "Articles" %}
-  {% assign nav_label = "Articles" %}
-  {% assign languages_label = "Languages" %}
-  {% assign page_dir = "ltr" %}
-{% elsif lang == "de" %}
-  {% assign brand = "Sportklettern" %}
-  {% assign intro = "Ein Ort zum Lesen und Lernen über Sportklettern." %}
-  {% assign section_home = "Beiträge" %}
-  {% assign nav_label = "Beiträge" %}
-  {% assign languages_label = "Sprachen" %}
-  {% assign page_dir = "ltr" %}
-{% elsif lang == "fr" %}
-  {% assign brand = "Escalade sportive" %}
-  {% assign intro = "Un repère pour lire et apprendre l’escalade sportive." %}
-  {% assign section_home = "Articles" %}
-  {% assign nav_label = "Articles" %}
-  {% assign languages_label = "Langues" %}
-  {% assign page_dir = "ltr" %}
-{% else %}
-  {% assign brand = "صعودهای ورزشی" %}
-  {% assign intro = "مرجع تخصصی آموزش، دانش علمی و پژوهش در صعودهای ورزشی." %}
-  {% assign section_home = "مطالب" %}
-  {% assign nav_label = "مطالب" %}
-  {% assign languages_label = "زبان‌ها" %}
-  {% assign page_dir = "rtl" %}
-{% endif %}
-{% assign section_url = "/" | append: lang | append: "/" %}
+{% assign nav = site.data.nav[lang] %}
 {% assign lang_posts = site.posts | where: "lang", lang | sort: "date" | reverse %}
 
-<header class="side-bar" dir="{{ page_dir }}">
+<header class="side-bar" dir="{{ nav.dir }}">
   <div class="site-header">
-    <a href="{{ section_url | relative_url }}" class="site-title lh-tight">{{ brand }}</a>
+    <a href="{{ nav.home_url | relative_url }}" class="site-title lh-tight">{{ nav.brand }}</a>
 
     <button
       id="menu-button"
@@ -47,24 +18,22 @@
   </div>
 
   <div class="sidebar-intro">
-    <p>{{ intro }}</p>
+    <p>{{ nav.intro }}</p>
   </div>
 
-  <nav class="sidebar-languages" aria-label="{{ languages_label }}">
-    <a href="{{ '/fa/' | relative_url }}" lang="fa" dir="rtl" hreflang="fa"{% if lang == "fa" %} aria-current="true"{% endif %}>فارسی</a>
-    <a href="{{ '/en/' | relative_url }}" lang="en" hreflang="en"{% if lang == "en" %} aria-current="true"{% endif %}>English</a>
-    <a href="{{ '/de/' | relative_url }}" lang="de" hreflang="de"{% if lang == "de" %} aria-current="true"{% endif %}>Deutsch</a>
-    <a href="{{ '/fr/' | relative_url }}" lang="fr" hreflang="fr"{% if lang == "fr" %} aria-current="true"{% endif %}>Français</a>
-  </nav>
-
-  <nav class="site-nav" aria-label="{{ nav_label }}">
+  <nav class="site-nav" aria-label="{{ nav.home_label }}">
     <ul class="nav-list">
       <li class="nav-list-item">
-        <a href="{{ section_url | relative_url }}" class="nav-list-link{% if page.url == section_url %} active{% endif %}">{{ section_home }}</a>
+        <a href="{{ nav.home_url | relative_url }}" class="nav-list-link{% if page.url == nav.home_url %} active{% endif %}">{{ nav.home_label }}</a>
       </li>
       {% for post in lang_posts %}
       <li class="nav-list-item">
         <a href="{{ post.url | relative_url }}" class="nav-list-link{% if page.url == post.url %} active{% endif %}">{{ post.title | escape }}</a>
+      </li>
+      {% endfor %}
+      {% for item in nav.pages %}
+      <li class="nav-list-item">
+        <a href="{{ item.url | relative_url }}" class="nav-list-link{% if page.url == item.url %} active{% endif %}">{{ item.title }}</a>
       </li>
       {% endfor %}
     </ul>

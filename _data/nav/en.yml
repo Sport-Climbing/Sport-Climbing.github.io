@@ -1,0 +1,16 @@
+dir: ltr
+brand: Sport Climbing
+intro: A reference for learning and reading about sport climbing.
+home_label: Articles
+home_url: /en/
+articles_label: Articles
+pages_label: Pages
+all_languages: All languages
+copyright: Sport Climbing
+pages:
+  - title: About
+    url: /en/about/
+  - title: Editorial policy and sources
+    url: /en/editorial-policy/
+  - title: Contact
+    url: /en/contact/
