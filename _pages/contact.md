@@ -3,7 +3,12 @@ layout: default
 title: ارتباط با ما
 permalink: /contact/
 lang: fa
+lang_name: فارسی
+lang_order: 1
+translation_key: contact
 ---
+
+{% include translation_links.html %}
 
 # ارتباط با ما
 
