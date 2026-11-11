@@ -1,0 +1,133 @@
+.sidebar-intro {
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+.sidebar-intro p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.sidebar-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  padding: 0.85rem 1rem 0.35rem;
+}
+
+.sidebar-languages a {
+  text-decoration: none;
+}
+
+.sidebar-languages a[aria-current="true"] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.site-footer-links {
+  line-height: 1.8;
+}
+
+.site-footer-links a,
+.sidebar-intro a {
+  overflow-wrap: anywhere;
+}
+
+.nav-list-link {
+  overflow-wrap: anywhere;
+}
+
+.lang-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.lang-post-card h2 {
+  margin: 0 0 0.35rem;
+  line-height: 1.5;
+}
+
+.lang-post-card h2 a {
+  text-decoration: none;
+}
+
+.lang-post-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.lang-post-date {
+  margin: 0 0 0.4rem;
+  color: var(--text-grey-dk-000, #666);
+  font-size: 0.85rem;
+}
+
+.translation-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.translation-links a {
+  text-decoration: none;
+}
+
+.translation-links a:hover,
+.translation-links a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.translation-links a[aria-current="page"] {
+  font-weight: 700;
+  color: inherit;
+}
+
+.gateway-body {
+  margin: 0;
+  background: var(--body-background-color, #fff);
+}
+
+.gateway {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.gateway h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.gateway-links {
+  width: min(22rem, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.gateway-links a {
+  display: block;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid var(--border-color, #eeebee);
+  border-radius: 8px;
+  color: var(--body-text-color, #1f1f1f);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.gateway-links a:hover,
+.gateway-links a:focus-visible {
+  border-color: var(--link-color, #7253ed);
+  color: var(--link-color, #7253ed);
+}

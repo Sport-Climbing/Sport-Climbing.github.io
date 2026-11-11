@@ -2,6 +2,7 @@
 layout: default
 title: ارتباط با ما
 permalink: /contact/
+lang: fa
 ---
 
 # ارتباط با ما

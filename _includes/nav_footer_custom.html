@@ -1,11 +1,36 @@
+{% assign lang = page.lang | default: "fa" %}
+{% if lang == "en" %}
+  {% assign all_languages = "All languages" %}
+  {% assign page_dir = "ltr" %}
+{% elsif lang == "de" %}
+  {% assign all_languages = "Alle Sprachen" %}
+  {% assign page_dir = "ltr" %}
+{% elsif lang == "fr" %}
+  {% assign all_languages = "Toutes les langues" %}
+  {% assign page_dir = "ltr" %}
+{% else %}
+  {% assign all_languages = "همهٔ زبان‌ها" %}
+  {% assign page_dir = "rtl" %}
+{% endif %}
 
-<div dir="rtl" class="site-footer-links">
+<div dir="{{ page_dir }}" class="site-footer-links">
+  {% if lang == "fa" %}
   <a href="{{ '/about/' | relative_url }}">درباره ما</a><br>
   <a href="{{ '/editorial-policy/' | relative_url }}">سیاست تحریریه و منابع</a><br>
-  <a href="{{ '/contact/' | relative_url }}">ارتباط با ما</a>
-
+  <a href="{{ '/contact/' | relative_url }}">ارتباط با ما</a><br>
+  {% endif %}
+  <a href="{{ '/' | relative_url }}">{{ all_languages }}</a>
 </div>
 
-<div dir="rtl">
-  © 2026 صعودهای ورزشی
+<div dir="{{ page_dir }}">
+  © 2026
+  {% if lang == "fa" %}
+  صعودهای ورزشی
+  {% elsif lang == "de" %}
+  Sportklettern
+  {% elsif lang == "fr" %}
+  Escalade sportive
+  {% else %}
+  Sport Climbing
+  {% endif %}
 </div>
