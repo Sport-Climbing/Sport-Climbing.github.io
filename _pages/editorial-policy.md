@@ -4,9 +4,14 @@ title: سیاست تحریریه و منابع
 permalink: /editorial-policy/
 description: سیاست تحریریه، ارزیابی منابع و اصول انتشار محتوای تخصصی
 lang: fa
+lang_name: فارسی
+lang_order: 1
+translation_key: editorial-policy
 nav_order: 6
 ---
 
+
+{% include translation_links.html %}
 
 # سیاست تحریریه و منابع
 

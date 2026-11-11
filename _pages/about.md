@@ -4,8 +4,13 @@ title: "درباره ما"
 permalink: /about/
 description: "درباره صعودهای ورزشی؛ مرجع تخصصی آموزش، دانش علمی، پژوهش و اطلاعات سنگ‌نوردی ورزشی"
 lang: fa
+lang_name: فارسی
+lang_order: 1
+translation_key: about
 nav_order: 5
 ---
+
+{% include translation_links.html %}
 
 # درباره سایت صعودهای ورزشی
 
