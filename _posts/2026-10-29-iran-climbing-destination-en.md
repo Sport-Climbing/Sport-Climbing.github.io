@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Iran, a new destination for climbing"
-description: "Iran for French-speaking climbers: sport routes near Tehran, the Alborz, the Zagros and Damavand."
+description: "Iran for professional climbers: sport routes near Tehran, the Alborz, the Zagros and Damavand."
 date: 2026-10-29
 lang: en
 lang_name: English
@@ -13,7 +13,7 @@ nav_exclude: true
 
 # Iran, a new destination for climbing
 
-For French-speaking climbers, Iran is much more than an unusual destination. It is a vast place for adventure, where cliffs, mountains and cultures meet. Near Tehran, areas such as Pol-e Khab offer sport routes across a wide range of grades, while other sectors open onto rock and landscapes that feel quite different. <citation src="1"></citation>
+For professional climbers, Iran is much more than an unusual destination. It is a vast place for adventure, where cliffs, mountains and cultures meet. Near Tehran, areas such as Pol-e Khab offer sport routes across a wide range of grades, while other sectors open onto rock and landscapes that feel quite different. <citation src="1"></citation>
 
 The variety of the terrain is one of the country’s real strengths. From the summits of the Alborz to the Zagros mountains, a trip can change shape as you go: a day on a cliff, a hike at altitude, or a long ascent. Damavand, the emblematic volcano that rises to 5,610 metres, draws mountaineers looking for a summit worth the journey. <citation src="1,3"></citation>
 

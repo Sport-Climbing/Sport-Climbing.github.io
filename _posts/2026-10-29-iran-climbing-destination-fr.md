@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L’Iran, une nouvelle destination pour l’escalade"
-description: "L’Iran pour les grimpeurs francophones : voies sportives près de Téhéran, Alborz, Zagros et le Damavand."
+description: "L’Iran pour les grimpeurs professionnels : voies sportives près de Téhéran, Alborz, Zagros et le Damavand."
 date: 2026-10-29
 lang: fr
 lang_name: Français
@@ -13,7 +13,7 @@ nav_exclude: true
 
 # L’Iran, une nouvelle destination pour l’escalade
 
-Pour les grimpeurs francophones, l’Iran offre bien plus qu’une destination inhabituelle : c’est un vaste terrain d’aventure où se rencontrent falaises, montagnes et cultures. Près de Téhéran, des sites comme Pol-e Khab proposent des voies sportives de niveaux variés, tandis que d’autres secteurs permettent de découvrir des rochers et des paysages très différents. <citation src="1"></citation>
+Pour les grimpeurs professionnels, l’Iran offre bien plus qu’une destination inhabituelle : c’est un vaste terrain d’aventure où se rencontrent falaises, montagnes et cultures. Près de Téhéran, des sites comme Pol-e Khab proposent des voies sportives de niveaux variés, tandis que d’autres secteurs permettent de découvrir des rochers et des paysages très différents. <citation src="1"></citation>
 
 La diversité des reliefs est l’un des grands atouts du pays. Des sommets de l’Alborz aux montagnes du Zagros, l’Iran invite à varier les expériences : journée d’escalade sur falaise, randonnée en altitude ou grande ascension. Le Damavand, volcan emblématique qui culmine à 5 610 mètres, attire notamment les alpinistes en quête d’un objectif marquant. <citation src="1,3"></citation>
 
