@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ '/assets/css/rtl.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<script src="{{ '/assets/js/language-search.js' | relative_url }}" defer></script>
 {% if page.translation_key %}
   {% assign versions = "" | split: "" %}
   {% for doc in site.documents %}

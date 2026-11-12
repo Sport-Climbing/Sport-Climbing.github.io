@@ -1,0 +1,15 @@
+{% assign lang = page.lang | default: "fa" %}
+{% assign nav = site.data.nav[lang] %}
+
+<h1>{{ nav.brand }}</h1>
+<p>{{ nav.intro }}</p>
+
+<h2>{{ nav.articles_label }}</h2>
+{% include language_posts.html %}
+
+<h2>{{ nav.pages_label }}</h2>
+<ul>
+  {% for item in nav.pages %}
+  <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+  {% endfor %}
+</ul>

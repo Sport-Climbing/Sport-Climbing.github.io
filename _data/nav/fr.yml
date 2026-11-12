@@ -1,0 +1,16 @@
+dir: ltr
+brand: Escalade sportive
+intro: Un repère pour lire et apprendre l’escalade sportive.
+home_label: Articles
+home_url: /fr/
+articles_label: Articles
+pages_label: Pages
+all_languages: Toutes les langues
+copyright: Escalade sportive
+pages:
+  - title: À propos
+    url: /fr/about/
+  - title: Politique éditoriale et sources
+    url: /fr/editorial-policy/
+  - title: Contact
+    url: /fr/contact/

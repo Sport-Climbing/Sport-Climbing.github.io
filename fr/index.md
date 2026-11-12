@@ -1,12 +1,10 @@
 ---
 layout: default
-title: Français
+title: Escalade sportive
 description: Articles sur l’escalade sportive en français
 lang: fr
 nav_exclude: true
 heading_anchors: false
 ---
 
-# Français
-
-{% include language_posts.html %}
+{% include language_home.html %}

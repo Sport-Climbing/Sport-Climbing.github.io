@@ -16,9 +16,9 @@
   {% else %}
   {% for post in lang_posts %}
   <article class="lang-post-card">
-    <h2>
+    <h3>
       <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </h2>
+    </h3>
     <p class="lang-post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
     {% if post.description %}
     <p>{{ post.description | escape }}</p>

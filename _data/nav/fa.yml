@@ -1,0 +1,16 @@
+dir: rtl
+brand: صعودهای ورزشی
+intro: مرجع تخصصی آموزش، دانش علمی و پژوهش در صعودهای ورزشی.
+home_label: مطالب
+home_url: /fa/
+articles_label: مطالب
+pages_label: صفحه‌ها
+all_languages: همهٔ زبان‌ها
+copyright: صعودهای ورزشی
+pages:
+  - title: درباره ما
+    url: /fa/about/
+  - title: سیاست تحریریه و منابع
+    url: /fa/editorial-policy/
+  - title: ارتباط با ما
+    url: /fa/contact/

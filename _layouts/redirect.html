@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'fa' }}" {% if page.lang == 'fa' or page.lang == nil %}dir="rtl"{% else %}dir="ltr"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <title>{{ page.title | escape }}</title>
+</head>
+<body>
+  <p><a href="{{ page.redirect_to | relative_url }}">{{ page.title | escape }}</a></p>
+</body>
+</html>

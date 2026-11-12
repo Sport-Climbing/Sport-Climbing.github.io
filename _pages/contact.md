@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ارتباط با ما
-permalink: /contact/
+permalink: /fa/contact/
 lang: fa
 lang_name: فارسی
 lang_order: 1
