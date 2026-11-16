@@ -115,38 +115,72 @@ html[dir="ltr"] .site-footer {
   box-sizing: border-box;
 }
 
+.gateway-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: max-content;
+  max-width: 100%;
+}
+
 .gateway h1 {
   margin: 0;
   text-align: center;
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: clamp(1.2rem, 5.4vw, 2rem);
+  line-height: 1.4;
+  white-space: nowrap;
   color: #fff;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
 .gateway-links {
-  width: min(22rem, 100%);
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 2rem;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.45rem;
+  width: 100%;
+  margin-top: 0.9rem;
 }
 
 .gateway-links a {
-  display: block;
-  padding: 0.95rem 1.1rem;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.3rem;
   border: 1px solid transparent;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.94);
   color: #1f1f1f;
   text-align: center;
   text-decoration: none;
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 
 .gateway-links a:hover,
 .gateway-links a:focus-visible {
   border-color: var(--link-color, #7253ed);
   color: var(--link-color, #7253ed);
+}
+
+.gateway-copy {
+  position: fixed;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.gateway-copy:hover,
+.gateway-copy:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
