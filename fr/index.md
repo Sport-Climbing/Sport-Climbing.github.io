@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Escalade sportive
+title: Sport Climbing in Iran
 description: Articles sur l’escalade sportive en français
 lang: fr
 nav_exclude: true

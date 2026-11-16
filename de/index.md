@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sportklettern
+title: Sport Climbing in Iran
 description: Beiträge zum Sportklettern auf Deutsch
 lang: de
 nav_exclude: true

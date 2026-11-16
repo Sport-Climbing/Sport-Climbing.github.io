@@ -1,6 +1,6 @@
 ---
 layout: default
-title: صعودهای ورزشی
+title: Sport Climbing in Iran
 description: مطالب فارسی صعودهای ورزشی
 lang: fa
 nav_exclude: true
