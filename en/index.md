@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sport Climbing
+title: Sport Climbing in Iran
 description: Sport climbing articles in English
 lang: en
 nav_exclude: true

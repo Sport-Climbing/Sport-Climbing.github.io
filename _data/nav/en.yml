@@ -1,12 +1,12 @@
 dir: ltr
-brand: Sport Climbing
+brand: Sport Climbing in Iran
 intro: A reference for learning and reading about sport climbing.
 home_label: Articles
 home_url: /en/
 articles_label: Articles
 pages_label: Pages
 all_languages: All languages
-copyright: Sport Climbing
+copyright: Sport Climbing in Iran
 pages:
   - title: About
     url: /en/about/
