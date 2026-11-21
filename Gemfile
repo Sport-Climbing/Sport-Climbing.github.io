@@ -16,6 +16,11 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  # Declared in _config.yml or required by the just-the-docs remote theme.
+  # GitHub Pages provides these; a local Jekyll 4 bundle does not.
+  gem "jekyll-include-cache"
+  gem "jekyll-remote-theme"
+  gem "jekyll-sitemap"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
